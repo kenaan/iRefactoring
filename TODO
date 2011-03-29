@@ -10,11 +10,16 @@ TODO
 
 * Improve User experience
 
+- write a NCoverParser to generate required data format for complexity and coverage using cwp report.
+- generate report both for complexity and coverage
 - load code commits after system startup to improve efficiency
 - make configuration easier
+
+
 - show loading information while waiting for calculating data
 - improve user guide
 
 * Future enhancement
 
 - show the trends of commits and complexity
+

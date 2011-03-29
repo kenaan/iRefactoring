@@ -24030,3 +24030,247 @@ Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/edcore?authen
 Processing PlotsController#project_plot (for 127.0.0.1 at 2011-03-08 09:11:42) [GET]
   Parameters: {"id"=>"edcore"}
 Completed in 1791ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/edcore/plot]
+
+
+Processing StaticPagesController#introduction (for 127.0.0.1 at 2011-03-08 20:38:25) [GET]
+Rendering template within layouts/application
+Rendering static_pages/introduction
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-03-08 20:38:27) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+ERROR: compiling _run_erb_app47views47projects47index46html46erb RAISED compile error
+/Users/twer/workspace/iRefactoring/app/views/projects/index.html.erb:14: syntax error, unexpected '=', expecting tASSOC
+...w', :id => project, :commits = @commits}, :method => 'GET', 
+                              ^
+/Users/twer/workspace/iRefactoring/app/views/projects/index.html.erb:14: syntax error, unexpected ',', expecting ')'
+...= @commits}, :method => 'GET', 
+                              ^
+Function body:           def _run_erb_app47views47projects47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<script type=\"text/javascript\" src=\"/javascripts/swfobject.js\"></script>\n\n<div class=\"pagehead\">\n\t<ul class=\"tabs\">\n\t\t<li><a href=\"/\">Introduction</a></li>\n\t\t<li><a class=\"selected\" href=\"/projects\">Projects</a></li>\n\t\t<li><a href=\"/configuration\">Configuration</a></li>\n\t\t<li><a href=\"/acknowledgement\">Acknowledgement</a></li>\n\t</ul>\n</div>\n<div class=\"projects\">\n\t<ul class=\"tabs\">\t\t\n\t\t"
+
+
+
+
+
+
+
+
+
+
+
+;  @projects.each do |project|; @output_buffer.concat "\n\t\t\t<li>"
+; @output_buffer.concat(( link_to_remote project, :url => { :controller => 'plots', :action => 'show', :id => project, :commits = @commits}, :method => 'GET', 
+			:update => 'plot-graph' ).to_s); @output_buffer.concat "</li>\n\t\t"
+;  end ; @output_buffer.concat "\n\t</ul>\n</div>\n<div id=\"plot-graph\">\n\t"
+
+
+
+; @output_buffer.concat(( @graph ).to_s); @output_buffer.concat "\n</div>\n\t"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/twer/workspace/iRefactoring/app/views/projects/index.html.erb:25:in `compile!'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_view/base.rb:367:in `_render_with_layout'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/base.rb:1174:in `render_for_file'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/base.rb:896:in `render_without_benchmark'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/twer/workspace/iRefactoring/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/base.rb:868:in `render_without_benchmark'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/twer/workspace/iRefactoring/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/base.rb:1248:in `default_render'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/Users/twer/workspace/iRefactoring/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/twer/workspace/iRefactoring/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+/Users/twer/workspace/iRefactoring/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+/Users/twer/workspace/iRefactoring/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+/Users/twer/workspace/iRefactoring/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/Users/twer/workspace/iRefactoring/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+/Users/twer/workspace/iRefactoring/vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `require'
+/Users/twer/workspace/iRefactoring/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/Users/twer/workspace/iRefactoring/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/Users/twer/workspace/iRefactoring/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/Users/twer/workspace/iRefactoring/vendor/rails/railties/lib/commands/server.rb:49
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/Users/twer/workspace/iRefactoring/app/views/projects/index.html.erb:14: syntax error, unexpected '=', expecting tASSOC
+...w', :id => project, :commits = @commits}, :method => 'GET', 
+                              ^
+/Users/twer/workspace/iRefactoring/app/views/projects/index.html.erb:14: syntax error, unexpected ',', expecting ')'
+...= @commits}, :method => 'GET', 
+                              ^) on line #14 of app/views/projects/index.html.erb:
+11: <div class="projects">
+12: 	<ul class="tabs">		
+13: 		<% @projects.each do |project|%>
+14: 			<li><%= link_to_remote project, :url => { :controller => 'plots', :action => 'show', :id => project, :commits = @commits}, :method => 'GET', 
+15: 			:update => 'plot-graph' %></li>
+16: 		<% end %>
+17: 	</ul>
+
+    app/views/projects/index.html.erb:25:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:367:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1174:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1248:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendered /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (29.5ms)
+Rendered /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-03-08 20:38:38) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 1731ms (View: 263, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing StaticPagesController#introduction (for 127.0.0.1 at 2011-03-28 15:47:14) [GET]
+Rendering template within layouts/application
+Rendering static_pages/introduction
+Completed in 60ms (View: 20, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-03-28 15:47:16) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-28 15:47:18) [GET]
+  Parameters: {"authenticity_token"=>"060e622c99f186d0d9e4a8147a965ceba0d453bf", "id"=>"edcore"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/edcore?authenticity_token=060e622c99f186d0d9e4a8147a965ceba0d453bf]
+
+
+Processing PlotsController#project_plot (for 127.0.0.1 at 2011-03-28 15:47:18) [GET]
+  Parameters: {"id"=>"edcore"}
+Completed in 2249ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/edcore/plot]

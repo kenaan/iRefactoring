@@ -1,0 +1,17 @@
+src/questionnaire-admin-integration-api/SectionConverter.cs:2
+src/questionnaire-admin-integration/PreviewableCQSDataElementRedirect/PreviewableCQSDataElementRedirectController.cs:1
+src/questionnaire-admin-integration-api/GetTranslationStringExtension.cs:2
+src/questionnaire-admin-integration-api/FrozenDataElement.cs:1
+src/questionnaire-admin-integration-api/FrozenQuestionSetRepository.cs:4
+src/questionnaire-admin-integration-api/FrozenVisualGroup.cs:1
+src/questionnaire-admin-integration-api/FrozenDataField.cs:1
+src/questionnaire-admin-integration-api/DataElementConverter.cs:4
+src/questionnaire-admin-integration-api/FrozenGDERepository.cs:2
+src/questionnaire-admin-integration-api/FrozenQuestionSet.cs:1
+src/questionnaire-admin-integration-api/InMemoryCache.cs:6
+src/questionnaire-admin-integration/PreviewableDataElementRedirect/PreviewableDataElementRedirectController.cs:1
+src/questionnaire-admin-integration-api/FrozenSection.cs:1
+src/questionnaire-admin-integration/PreviewableAllCQSRedirect/PreviewableAllCQSRedirectController.cs:1
+src/questionnaire-admin-integration-api/FrozenPreviewGDERepository.cs:1
+src/questionnaire-admin-integration-api/FrozenVisualStep.cs:1
+src/questionnaire-admin-integration-api/FrozenGde.cs:1

@@ -1,12 +1,12 @@
 class Project
-  attr_reader :name, :class_path
+  attr_reader :name
   
-  def initialize(name, vcs, complexity_provider, language, class_path)
+  def initialize(name, vcs, language)
     set_instance_variables(binding, *local_variables)
   end
   
   def self.find(name)
-    project = Project.new(name, DDR_ENV[:vcs], DDR_ENV[:complexity_provider], DDR_ENV[:language], DDR_ENV[:class_path])
+    project = Project.new(name, DDR_ENV[:vcs], DDR_ENV[:language])
   end
 
   def analysis
@@ -28,7 +28,6 @@ class Project
   end
   
   def code_complexity_analyzed
-    complexity_parser = class_eval("#{@complexity_provider}Parser.new('#{@name}')")
-    codes = complexity_parser.get_complexity(@class_path)
+    
   end
 end
