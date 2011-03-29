@@ -1,6 +1,7 @@
 class PlotsController < ApplicationController
   def show
     @complexity_graph = open_flash_chart_object(750,450, project_complexity_plot_path(params[:id]))
+    @coverage_graph = open_flash_chart_object(750,450, project_coverage_plot_path(params[:id]))
     render :layout => false
   end
 
@@ -8,20 +9,14 @@ class PlotsController < ApplicationController
     chart = OpenFlashChart.new
     project = Project.find(params[:id])
     add_title(chart, project.name)
-    codes = project.analysis
-    
-    commits = codes.map{ |code|
-      code.commit
-    }
-    max_commit = commits.max
 
-    complexities = codes.map{ |code|
-      code.complexity
-    }
-    max_complexity = complexities.max
+    codes = read(project)
+    max_commit = codes.map {|code| code.commit}.max
+    max_complexity = codes.map {|code| code.complexity}.max
     
     add_element_for_project(chart, codes)
     add_axis(chart, max_commit, max_complexity, "Complexity")
+    
     render :text => chart.to_s
   end
   
@@ -30,6 +25,18 @@ class PlotsController < ApplicationController
   end
   
   private
+  def read project
+    commits = $code_commits
+    complexity = project.code_complexity
+    complexity.each_key{ |key|
+      commit = commits[key]
+      if(!commit.nil?)
+        complexity[key].commit = commit
+      end
+    }
+    return complexity.values
+  end
+  
   def add_title(chart, project_name)
     title = Title.new("Project: " + project_name)
     title.set_style('{font-size: 29px; color: #771177}')

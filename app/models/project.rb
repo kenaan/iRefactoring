@@ -10,7 +10,7 @@ class Project
   end
 
   def analysis
-    codes = code_complexity_analyzed
+    codes = code_complexity
     commits = $code_commits
     codes.each_key{ |key|
       commit = commits[key]
@@ -20,14 +20,8 @@ class Project
     }
     codes.values
   end
-
-  private 
-  def code_committed
-    log_parser = class_eval("Vcs::#{@vcs}.new()")
-    log_parser.get_code_committed
-  end
   
-  def code_complexity_analyzed
+  def code_complexity
     codes = {}
     complexity_file = File.join(DDR_ENV[:project_root], @name, "complexity.txt")
     File.open(complexity_file) { |f|
@@ -39,7 +33,7 @@ class Project
     codes
   end
   
-  def code_coverage_analyzed
+  def code_coverage
     codes = {}
     complexity_file = File.join(DDR_ENV[:project_root], @name, "coverage.txt")
     File.open(complexity_file) { |f|
