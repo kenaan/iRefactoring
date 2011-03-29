@@ -11,7 +11,7 @@ class Project
 
   def analysis
     codes = code_complexity_analyzed
-    commits = code_committed
+    commits = $code_commits
     codes.each_key{ |key|
       commit = commits[key]
       if(!commit.nil?)

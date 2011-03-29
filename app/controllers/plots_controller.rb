@@ -1,10 +1,6 @@
 class PlotsController < ApplicationController
   def show
-    measure = params[:measure]
-    if(measure.eql? "complexity")
-      @graph = open_flash_chart_object(750,450, project_complexity_plot_path(params[:id]))
-    else
-    end
+    @complexity_graph = open_flash_chart_object(750,450, project_complexity_plot_path(params[:id]))
     render :layout => false
   end
 

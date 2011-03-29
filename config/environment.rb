@@ -84,4 +84,9 @@ Rails::Initializer.run do |config|
     :project_root => File.join(RAILS_ROOT, "projects")
   }
   DDR_ENV.merge!(render_config(File.join(RAILS_ROOT, 'config', 'project.yml')))
+  
 end
+
+
+vcs = DDR_ENV[:vcs]
+$code_commits = instance_eval("Vcs::#{vcs}.new()").get_code_committed
