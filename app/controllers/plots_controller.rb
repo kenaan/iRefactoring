@@ -51,7 +51,7 @@ class PlotsController < ApplicationController
   def add_element_for_project(chart, codes)
     scatter = Scatter.new('#FFD600', 10) 
     scatter.values = codes.map! { |code|
-      new_scatter_point(code.commit, code.complexity, code.tip)
+      new_scatter_point(code.commit, code.complexity, code.complexity_tip)
     }
     scatter.set_dot_style("dot")
     chart.add_element(scatter)

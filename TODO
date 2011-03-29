@@ -6,11 +6,13 @@ Features:
 - show multiple project reports in one page with ajax
 - support svn log and sonar report
 
+
+- write a NCoverParser to generate required data format for complexity and coverage using cwp report.
+
 TODO
 
 * Improve User experience
 
-- write a NCoverParser to generate required data format for complexity and coverage using cwp report.
 - generate report both for complexity and coverage
 - load code commits after system startup to improve efficiency
 - make configuration easier
