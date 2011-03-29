@@ -1,5 +1,5 @@
 class PlotsController < ApplicationController
-  def complexity
+  def show
     @graph = open_flash_chart_object(750,450, project_plot_path(params[:id]))
     render :layout => false
   end

@@ -11,7 +11,7 @@
 <div class="projects">
 	<ul class="tabs">		
 		<% @projects.each do |project|%>
-			<li><%= link_to_remote project, :url => { :controller => 'plots', :action => 'complexity', :id => project}, :method => 'GET', 
+			<li><%= link_to_remote project, :url => { :controller => 'plots', :action => 'show', :id => project}, :method => 'GET', 
 			:update => 'plot-graph' %></li>
 		<% end %>
 	</ul>
