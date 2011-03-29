@@ -28,6 +28,14 @@ class Project
   end
   
   def code_complexity_analyzed
-    
+    codes = {}
+    complexity_file = File.join(DDR_ENV[:project_root], @name, "complexity.txt")
+    File.open(complexity_file) { |f|
+      while line = f.gets
+        tmp = line.split(":")
+        codes[tmp[0]] = Code.new(tmp[0], 0, tmp[1].to_i)
+      end
+    } 
+    codes
   end
 end

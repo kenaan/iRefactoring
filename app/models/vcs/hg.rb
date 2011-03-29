@@ -12,6 +12,7 @@ class Vcs::Hg
   end
   
   def read_line_into_commits line, commits
+    puts changes_in_one_commit(line)
     changes_in_one_commit(line).each{|change|
       if(commits.has_key?(change))
         commits[change] = commits[change] + 1

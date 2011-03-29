@@ -31,14 +31,14 @@ class NcoverParser
     "sources_full.html"
   end
   
-  def parse_log_to_complexity file
+  def parse_log_to_coverage file
     parse_log(file) do |row|
       coverage_description = row.xpath("td[2]/span").inner_html.strip
       coverage_description.split(":")[0].strip
     end
   end
   
-  def parse_log_to_coverage file
+  def parse_log_to_complexity file
     parse_log(file) do |row|
       row.xpath("td[5]/span").inner_html.strip
     end
@@ -59,7 +59,7 @@ class NcoverParser
 end
 
 ["admin", "admin-cli", "crm", "framework", "mytaxes", "questionnaire", "questionnaire-admin-cqs", "questionnaire-admin-gde", "questionnaire-admin-integration"].each{ |project|
-  ncover = NcoverParser.new("c:\\Cruise-Agent\\pipelines\\Trunk-Quality-of-Service\\", "/Users/twer/workspace/iRefactoring/sample/pwc/#{project}", "/Users/twer/workspace/iRefactoring/projects/#{project}")
+  ncover = NcoverParser.new("c:\\Cruise-Agent\\pipelines\\Trunk-Quality-of-Service\\", "/Users/twer/workspace/iRefactoring/sample/cwp/#{project}", "/Users/twer/workspace/iRefactoring/projects/#{project}")
   ncover.read_complexity
   ncover.read_coverage
 }

@@ -1,8 +1,8 @@
 :name: CWP
-:vcs: Svn
-#:vcs: Hg
-:language: java
-#:language: csharp
+# :vcs: Svn
+:vcs: Hg
+# :language: java
+:language: csharp
 :projects:
     - admin
     - admin-cli
