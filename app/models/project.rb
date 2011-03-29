@@ -45,7 +45,7 @@ class Project
     File.open(complexity_file) { |f|
       while line = f.gets
         tmp = line.split(":")
-        codes[tmp[0]] = Code.new(tmp[0], 0, 0, tmp[1].to_)
+        codes[tmp[0]] = Code.new(tmp[0], 0, 0, tmp[1].to_f)
       end
     } 
     codes

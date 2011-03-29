@@ -6,9 +6,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :projects
 
   map.with_options :controller => "plots" do |plot|
-    plot.project_plot 'projects/:id/plot', :action => 'project_plot'
-    plot.project_complexity_plot 'projects/:id/complexity_plot', :action => 'project_complexity_plot'
-    plot.project_coverage_plot 'projects/:id/coverage_plot', :action => 'project_coverage_plot'
+    plot.project_complexity_plot 'projects/:id/plot', :action => 'project_complexity_plot'
+    plot.project_coverage_plot 'projects/:id/plot', :action => 'project_coverage_plot'
   end
   
   map.connect '/introduction', :controller => 'static_pages', :action => 'introduction'
