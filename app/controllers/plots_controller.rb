@@ -1,10 +1,14 @@
 class PlotsController < ApplicationController
-  def show
+  def complexity
     @graph = open_flash_chart_object(750,450, project_plot_path(params[:id]))
     render :layout => false
   end
 
   def project_plot   
+    project_complexity_plot
+  end
+  
+  def project_complexity_plot
     chart = OpenFlashChart.new
     project = Project.find(params[:id])
     add_title(chart, project.name)
@@ -21,8 +25,12 @@ class PlotsController < ApplicationController
     max_complexity = complexities.max
     
     add_element_for_project(chart, codes)
-    add_axis(chart, max_commit, max_complexity)
+    add_axis(chart, max_commit, max_complexity, "Complexity")
     render :text => chart.to_s
+  end
+  
+  def project_coverage_plot
+    
   end
   
   private
@@ -32,7 +40,7 @@ class PlotsController < ApplicationController
     chart.set_title(title)
   end
   
-  def add_axis(chart, max_x, max_y)
+  def add_axis(chart, max_x, max_y, y_label)
     x = XAxis.new
     x.set_range(0, max_x + 10, max_x/20)
     x_legend = XLegend.new("commits per file")
@@ -42,7 +50,7 @@ class PlotsController < ApplicationController
   
     y = XAxis.new
     y.set_range(0, max_y+ 10, max_y/10)
-    y_legend = YLegend.new("Complexity")
+    y_legend = YLegend.new(y_label)
     y_legend.set_style('{font-size: 24px; color: #770077}')
     chart.set_y_legend(y_legend)
     chart.set_y_axis(y)
@@ -51,7 +59,7 @@ class PlotsController < ApplicationController
   def add_element_for_project(chart, codes)
     scatter = Scatter.new('#FFD600', 10) 
     scatter.values = codes.map! { |code|
-      new_scatter_point(code.commit, code.complexity, code.complexity_tip)
+      new_scatter_point(code.commit, code.complexity, code.tip)
     }
     scatter.set_dot_style("dot")
     chart.add_element(scatter)
