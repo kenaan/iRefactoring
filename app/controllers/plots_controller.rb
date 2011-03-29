@@ -10,28 +10,46 @@ class PlotsController < ApplicationController
     project = Project.find(params[:id])
     add_title(chart, project.name)
 
-    codes = read(project)
+    codes = read_complexity(project)
     max_commit = codes.map {|code| code.commit}.max
     max_complexity = codes.map {|code| code.complexity}.max
     
-    add_element_for_project(chart, codes)
+    add_complexity_element_for_project(chart, codes)
     add_axis(chart, max_commit, max_complexity, "Complexity")
     
     render :text => chart.to_s
   end
   
   def project_coverage_plot
+    chart = OpenFlashChart.new
+    project = Project.find(params[:id])
+    add_title(chart, project.name)
+
+    codes = read_complexity(project)
+    max_commit = codes.map {|code| code.commit}.max
+    max_coverage = codes.map {|code| code.coverage}.max
     
+    add_coverage_element_for_project(chart, codes)
+    add_axis(chart, max_commit, max_coverage, "Coverage")
+    
+    render :text => chart.to_s
   end
   
   private
-  def read project
+  def read_complexity project
     commits = $code_commits
     complexity = project.code_complexity
+    coverages = project.code_coverage
+    
     complexity.each_key{ |key|
       commit = commits[key]
       if(!commit.nil?)
         complexity[key].commit = commit
+      end
+      
+      c = coverages[key]
+      if(!c.nil?)
+        complexity[key].coverage = c.coverage
       end
     }
     return complexity.values
@@ -59,10 +77,20 @@ class PlotsController < ApplicationController
     chart.set_y_axis(y)
   end
   
-  def add_element_for_project(chart, codes)
+  def add_complexity_element_for_project(chart, codes)
     scatter = Scatter.new('#FFD600', 10) 
     scatter.values = codes.map! { |code|
       new_scatter_point(code.commit, code.complexity, code.tip)
+    }
+    scatter.set_dot_style("dot")
+    chart.add_element(scatter)
+  end
+  
+  
+  def add_coverage_element_for_project(chart, codes)
+    scatter = Scatter.new('#FFD600', 10) 
+    scatter.values = codes.map! { |code|
+      new_scatter_point(code.commit, code.coverage, code.tip)
     }
     scatter.set_dot_style("dot")
     chart.add_element(scatter)

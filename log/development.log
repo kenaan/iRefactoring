@@ -27752,3 +27752,854 @@ Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/admin-cli?mea
 Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 21:58:27) [GET]
   Parameters: {"id"=>"admin-cli"}
 Completed in 20ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/admin-cli/plot]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-03-29 22:02:29) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2011-03-29 22:02:30) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"admin"}
+
+
+SyntaxError (/Users/twer/workspace/iRefactoring/app/controllers/plots_controller.rb:42: syntax error, unexpected '}', expecting kEND
+/Users/twer/workspace/iRefactoring/app/controllers/plots_controller.rb:85: syntax error, unexpected kEND, expecting '}'
+/Users/twer/workspace/iRefactoring/app/controllers/plots_controller.rb:87: module definition in method body
+/Users/twer/workspace/iRefactoring/app/controllers/plots_controller.rb:88: class definition in method body
+/Users/twer/workspace/iRefactoring/app/controllers/plots_controller.rb:94: syntax error, unexpected $end, expecting '}'):
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:382:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:382:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:381:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:256:in `require_or_load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:427:in `load_missing_constant'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:77:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:89:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:352:in `constantize'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:351:in `each'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:351:in `constantize'
+    /vendor/rails/activesupport/lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:388:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendered /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (22.8ms)
+Rendered /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.7ms)
+Rendering /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-03-29 22:02:40) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:02:41) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"admin-cli"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/admin-cli?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:02:41) [GET]
+  Parameters: {"id"=>"admin-cli"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/admin-cli/plot]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:02:47) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"crm"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/crm?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:02:47) [GET]
+  Parameters: {"id"=>"crm"}
+Completed in 41ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/crm/plot]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:02:49) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"framework"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/framework?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:02:49) [GET]
+  Parameters: {"id"=>"framework"}
+Completed in 133ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/framework/plot]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:02:51) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"questionnaire"}
+Rendering plots/show
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/plots/questionnaire?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:02:51) [GET]
+  Parameters: {"id"=>"questionnaire"}
+Completed in 46ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/questionnaire/plot]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:04:05) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"mytaxes"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/mytaxes?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:04:05) [GET]
+  Parameters: {"id"=>"mytaxes"}
+Completed in 164ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/mytaxes/plot]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:05:24) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"framework"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/framework?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:05:24) [GET]
+  Parameters: {"id"=>"framework"}
+
+
+NameError (undefined local variable or method `coverage' for #<PlotsController:0x103370420>):
+    /app/controllers/plots_controller.rb:40:in `read_complexity'
+    /app/controllers/plots_controller.rb:33:in `each_key'
+    /app/controllers/plots_controller.rb:33:in `read_complexity'
+    /app/controllers/plots_controller.rb:13:in `project_complexity_plot'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendered /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (31.7ms)
+Rendered /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (1.1ms)
+Rendering /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-03-29 22:05:42) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:05:44) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"framework"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/framework?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:05:44) [GET]
+  Parameters: {"id"=>"framework"}
+Completed in 294ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/framework/plot]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:05:53) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"mytaxes"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/mytaxes?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:05:53) [GET]
+  Parameters: {"id"=>"mytaxes"}
+Completed in 163ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/mytaxes/plot]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:06:02) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"questionnaire-admin-cqs"}
+Rendering plots/show
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/plots/questionnaire-admin-cqs?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:06:03) [GET]
+  Parameters: {"id"=>"questionnaire-admin-cqs"}
+Completed in 43ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/questionnaire-admin-cqs/plot]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:06:08) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"mytaxes"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/mytaxes?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:06:08) [GET]
+  Parameters: {"id"=>"mytaxes"}
+Completed in 138ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/mytaxes/plot]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:06:12) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"mytaxes"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/mytaxes?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:06:12) [GET]
+  Parameters: {"id"=>"mytaxes"}
+Completed in 259ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/mytaxes/plot]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:06:17) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"framework"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/framework?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:06:17) [GET]
+  Parameters: {"id"=>"framework"}
+Completed in 127ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/framework/plot]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:06:19) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"mytaxes"}
+Rendering plots/show
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/plots/mytaxes?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:06:19) [GET]
+  Parameters: {"id"=>"mytaxes"}
+Completed in 143ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/mytaxes/plot]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-03-29 22:08:13) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:08:14) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"admin"}
+
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.to_sym):
+    /vendor/rails/actionpack/lib/action_controller/routing/route.rb:243:in `extra_keys'
+    /vendor/rails/actionpack/lib/action_controller/routing/route.rb:243:in `map'
+    /vendor/rails/actionpack/lib/action_controller/routing/route.rb:243:in `extra_keys'
+    generated code (/vendor/rails/actionpack/lib/action_controller/routing/route.rb:154):3:in `generate'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:339:in `generate'
+    /vendor/rails/actionpack/lib/action_controller/url_rewriter.rb:208:in `rewrite_path'
+    /vendor/rails/actionpack/lib/action_controller/url_rewriter.rb:187:in `rewrite_url'
+    /vendor/rails/actionpack/lib/action_controller/url_rewriter.rb:165:in `rewrite'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:626:in `url_for'
+    (eval):18:in `project_complexity_plot_path'
+    /app/controllers/plots_controller.rb:7:in `show'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendered /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (29.1ms)
+Rendered /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:08:39) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"admin"}
+Rendering plots/show
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/admin?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:08:39) [GET]
+  Parameters: {"id"=>"admin"}
+
+
+ArgumentError (wrong number of arguments (0 for 4)):
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `project_complexity_plot'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendered /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (30.9ms)
+Rendered /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-03-29 22:09:24) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:09:25) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"admin"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/admin?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:09:25) [GET]
+  Parameters: {"id"=>"admin"}
+Completed in 37ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/admin/plot]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:09:28) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"admin"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/admin?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:09:28) [GET]
+  Parameters: {"id"=>"admin"}
+Completed in 34ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/admin/plot]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:09:33) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"admin"}
+Rendering plots/show
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/plots/admin?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:09:33) [GET]
+  Parameters: {"id"=>"admin"}
+Completed in 35ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/admin/plot]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:09:35) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"admin-cli"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/admin-cli?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:09:35) [GET]
+  Parameters: {"id"=>"admin-cli"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/admin-cli/plot]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-03-29 22:10:40) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:10:41) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"admin"}
+Rendering plots/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/admin?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:10:55) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"crm"}
+Rendering plots/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/crm?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing StaticPagesController#introduction (for 127.0.0.1 at 2011-03-29 22:11:27) [GET]
+Rendering template within layouts/application
+Rendering static_pages/introduction
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-03-29 22:11:29) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:11:31) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"crm"}
+Rendering plots/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/crm?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:11:31) [GET]
+  Parameters: {"id"=>"crm"}
+Completed in 39ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/crm/plot]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:11:35) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"mytaxes"}
+Rendering plots/show
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/mytaxes?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:11:35) [GET]
+  Parameters: {"id"=>"mytaxes"}
+Completed in 151ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/mytaxes/plot]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:11:38) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"mytaxes"}
+Rendering plots/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/mytaxes?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:11:38) [GET]
+  Parameters: {"id"=>"mytaxes"}
+Completed in 143ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/mytaxes/plot]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:13:05) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"framework"}
+Rendering plots/show
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/framework?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:13:05) [GET]
+  Parameters: {"id"=>"framework"}
+
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name):
+    /app/controllers/plots_controller.rb:11:in `project_complexity_plot'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendered /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (29.6ms)
+Rendered /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:14:16) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"crm"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/crm?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:14:16) [GET]
+  Parameters: {"id"=>"crm"}
+Completed in 41ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/crm/plot]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:15:27) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"mytaxes"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/mytaxes?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:15:27) [GET]
+  Parameters: {"id"=>"mytaxes"}
+Completed in 155ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/mytaxes/plot]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:16:03) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"mytaxes"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/mytaxes?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:16:03) [GET]
+  Parameters: {"id"=>"mytaxes"}
+Completed in 283ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/mytaxes/plot]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-03-29 22:17:39) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:17:40) [GET]
+  Parameters: {"measure"=>"complexity", "authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"mytaxes"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/mytaxes?measure=complexity&authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:17:40) [GET]
+  Parameters: {"id"=>"mytaxes"}
+Completed in 145ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/mytaxes/plot]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:18:26) [GET]
+  Parameters: {"id"=>"admin"}
+Completed in 27ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/admin/plot]
+
+
+Processing ProjectsController#admin (for 127.0.0.1 at 2011-03-29 22:19:18) [GET]
+  Parameters: {"id"=>"plot"}
+
+
+ActionController::UnknownAction (No action responded to admin. Actions: index):
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-03-29 22:19:21) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/projects/]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:19:23) [GET]
+  Parameters: {"authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"admin"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/admin?authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:19:23) [GET]
+  Parameters: {"id"=>"admin"}
+Completed in 34ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/admin/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-03-29 22:19:23) [GET]
+  Parameters: {"id"=>"admin"}
+Completed in 28ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/admin/plot/coverage]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:19:43) [GET]
+  Parameters: {"authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"admin-cli"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/admin-cli?authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:19:43) [GET]
+  Parameters: {"id"=>"admin-cli"}
+Completed in 20ms (View: 1, DB: 0) | 200 OK [http://localhost/projects/admin-cli/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-03-29 22:19:43) [GET]
+  Parameters: {"id"=>"admin-cli"}
+Completed in 19ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/admin-cli/plot/coverage]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:20:02) [GET]
+  Parameters: {"authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"crm"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/crm?authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:20:02) [GET]
+  Parameters: {"id"=>"crm"}
+Completed in 59ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/crm/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-03-29 22:20:02) [GET]
+  Parameters: {"id"=>"crm"}
+Completed in 52ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/crm/plot/coverage]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:20:32) [GET]
+  Parameters: {"authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"mytaxes"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/mytaxes?authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:20:32) [GET]
+  Parameters: {"id"=>"mytaxes"}
+Completed in 309ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/mytaxes/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-03-29 22:20:33) [GET]
+  Parameters: {"id"=>"mytaxes"}
+Completed in 189ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/mytaxes/plot/coverage]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-29 22:21:14) [GET]
+  Parameters: {"authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"questionnaire"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/questionnaire?authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-29 22:21:14) [GET]
+  Parameters: {"id"=>"questionnaire"}
+Completed in 64ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/questionnaire/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-03-29 22:21:14) [GET]
+  Parameters: {"id"=>"questionnaire"}
+Completed in 63ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/questionnaire/plot/coverage]
