@@ -17,32 +17,32 @@ class PlotsController < ApplicationController
   def project_plot measurement_name
     chart = OpenFlashChart.new
     project = Project.find(params[:id])
-    chart.set_title(title(project.name, measurement_name + " vs. commits"))
 
     codes = read(project)
     max_commit = codes.map {|code| code.commit}.max
     max_coverage = codes.map {|code| instance_eval("code.#{measurement_name}")}.max
 
-    add_element_to_chart_for_each_code(chart, codes) do |code|
+    scatter = convert_codes_to_scatter_point(codes) do |code|
       new_scatter_point(code.commit, instance_eval("code.#{measurement_name}"), code.tip)
     end
     
+    chart.add_element(scatter)
+    chart.set_title(title(project.name, measurement_name + " vs. commits"))
     chart.set_x_axis(x_axis(max_commit))
     chart.set_x_legend(x_legend)
-    
     chart.set_y_axis(y_axis(max_coverage))
     chart.set_y_legend(y_legend(measurement_name))
 
     render :text => chart.to_s
   end
   
-  def add_element_to_chart_for_each_code(chart, codes, &block)
+  def convert_codes_to_scatter_point(codes, &block)
      scatter = Scatter.new('#FFD600', 10) 
      scatter.values = codes.map! { |code|
        yield(code)
      }
      scatter.set_dot_style("dot")
-     chart.add_element(scatter)
+     scatter
   end
   
   def read project
@@ -92,10 +92,6 @@ class PlotsController < ApplicationController
     y_legend = YLegend.new(y_label)
     y_legend.set_style('{font-size: 24px; color: #770077}')
     y_legend
-  end
-  
-  def add_axis(chart, max_x, max_y, y_label)
-
   end
   
   def new_scatter_point(x, y, tooltip)
