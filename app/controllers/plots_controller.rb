@@ -25,14 +25,9 @@ class PlotsController < ApplicationController
       new_scatter_point(code.commit, instance_eval("code.#{measurement}"), code.tip)
     end
 
-    chart = new_chart(project.name, measurement, max_commit, max_coverage)
-    chart.add_element(scatter)
-    render :text => chart.to_s
-  end
-  
-  def new_chart project_name, measurement, max_x, max_y
-    graph = Graph.new(project_name, measurement, max_x, max_y)
-    graph
+    graph = Graph.new(project.name, measurement, max_commit, max_coverage)
+    graph.add_element(scatter)
+    render :text => graph.to_s
   end
   
   def read project
