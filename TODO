@@ -15,7 +15,8 @@ TODO
 
 * Improve User experience
 
-- make configuration easier
+- using bmc sample to fix the hardcoded svn parser
+- make configuration easier (regex for parse vcs log?)
 
 - improve user guide
 
