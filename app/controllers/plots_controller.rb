@@ -14,7 +14,10 @@ class PlotsController < ApplicationController
     max_commit = codes.map {|code| code.commit}.max
     max_complexity = codes.map {|code| code.complexity}.max
     
-    add_complexity_element_for_project(chart, codes)
+    add_element_to_chart_for_each_code(chart, codes) do |code|
+      new_scatter_point(code.commit, code.complexity, code.tip)
+    end
+    
     add_axis(chart, max_commit, max_complexity, "Complexity")
     
     render :text => chart.to_s
@@ -29,26 +32,26 @@ class PlotsController < ApplicationController
     max_commit = codes.map {|code| code.commit}.max
     max_coverage = codes.map {|code| code.coverage}.max
     
-    add_coverage_element_for_project(chart, codes)
+    add_element_to_chart_for_each_code(chart, codes) do |code|
+      new_scatter_point(code.commit, code.coverage, code.tip)
+    end
+    
     add_axis(chart, max_commit, max_coverage, "Coverage")
     
     render :text => chart.to_s
   end
   
-  ["complexity", "coverage"].each{ |measurement|
-    class_eval %Q{
-      def add_#{measurement}_element_for_project(chart, codes)
-        scatter = Scatter.new('#FFD600', 10) 
-        scatter.values = codes.map! { |code|
-          new_scatter_point(code.commit, code.#{measurement}, code.tip)
-        }
-        scatter.set_dot_style("dot")
-        chart.add_element(scatter)
-      end
-    }
-  }
-  
   private
+  
+  def add_element_to_chart_for_each_code(chart, codes, &block)
+     scatter = Scatter.new('#FFD600', 10) 
+     scatter.values = codes.map! { |code|
+       yield(code)
+     }
+     scatter.set_dot_style("dot")
+     chart.add_element(scatter)
+  end
+  
   def read project
     commits = $code_commits
     complexity = project.read(Measurement::Complexity.new)
