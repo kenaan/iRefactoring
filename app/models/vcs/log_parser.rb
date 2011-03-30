@@ -4,7 +4,7 @@ module Vcs::LogName
   end
 end
 
-module Vcs::CodePostfix;
+module Vcs::CodePostfix
   def source_code_postfix
     return ".cs" if @language == "csharp"
     return ".java" if @language == "java"

@@ -38,9 +38,10 @@ class PlotsController < ApplicationController
   private
   def read_complexity project
     commits = $code_commits
-    complexity = project.code_complexity
-    coverages = project.code_coverage
-    
+    # complexity = project.code_complexity
+    # coverages = project.code_coverage
+    complexity = project.read(Measurement::Complexity.new)
+    coverages = project.read(Measurement::Coverage.new)
     complexity.each_key{ |key|
       commit = commits[key]
       if(!commit.nil?)

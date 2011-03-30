@@ -9,6 +9,10 @@ class Project
     project = Project.new(name, DDR_ENV[:vcs], DDR_ENV[:language])
   end
   
+  def read measurement_parser
+    measurement_parser.parse(@name)
+  end
+  
   def code_complexity
     codes = {}
     complexity_file = File.join(DDR_ENV[:project_root], @name, "complexity.txt")
