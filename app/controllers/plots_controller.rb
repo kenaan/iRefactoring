@@ -39,8 +39,8 @@ class PlotsController < ApplicationController
       update_code_with_measurement(code_name, commits){ |commit|
         complexity[code_name].commit = commit
       }
-      update_code_with_measurement(code_name, coverages){ |coverage|
-        complexity[code_name].coverage = coverage
+      update_code_with_measurement(code_name, coverages){ |code|
+        complexity[code_name].coverage = code.coverage
       }
     }
     return complexity.values
