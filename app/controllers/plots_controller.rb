@@ -10,7 +10,7 @@ class PlotsController < ApplicationController
     project = Project.find(params[:id])
     add_title(chart, project.name, "Complexity vs. Commits")
 
-    codes = read_complexity(project)
+    codes = read(project)
     max_commit = codes.map {|code| code.commit}.max
     max_complexity = codes.map {|code| code.complexity}.max
     
@@ -25,7 +25,7 @@ class PlotsController < ApplicationController
     project = Project.find(params[:id])
     add_title(chart, project.name, "Coverage vs. Commits")
 
-    codes = read_complexity(project)
+    codes = read(project)
     max_commit = codes.map {|code| code.commit}.max
     max_coverage = codes.map {|code| code.coverage}.max
     
@@ -35,13 +35,25 @@ class PlotsController < ApplicationController
     render :text => chart.to_s
   end
   
+  ["complexity", "coverage"].each{ |measurement|
+    class_eval %Q{
+      def add_#{measurement}_element_for_project(chart, codes)
+        scatter = Scatter.new('#FFD600', 10) 
+        scatter.values = codes.map! { |code|
+          new_scatter_point(code.commit, code.#{measurement}, code.tip)
+        }
+        scatter.set_dot_style("dot")
+        chart.add_element(scatter)
+      end
+    }
+  }
+  
   private
-  def read_complexity project
+  def read project
     commits = $code_commits
-    # complexity = project.code_complexity
-    # coverages = project.code_coverage
     complexity = project.read(Measurement::Complexity.new)
     coverages = project.read(Measurement::Coverage.new)
+    
     complexity.each_key{ |key|
       commit = commits[key]
       if(!commit.nil?)
@@ -76,25 +88,6 @@ class PlotsController < ApplicationController
     y_legend.set_style('{font-size: 24px; color: #770077}')
     chart.set_y_legend(y_legend)
     chart.set_y_axis(y)
-  end
-  
-  def add_complexity_element_for_project(chart, codes)
-    scatter = Scatter.new('#FFD600', 10) 
-    scatter.values = codes.map! { |code|
-      new_scatter_point(code.commit, code.complexity, code.tip)
-    }
-    scatter.set_dot_style("dot")
-    chart.add_element(scatter)
-  end
-  
-  
-  def add_coverage_element_for_project(chart, codes)
-    scatter = Scatter.new('#FFD600', 10) 
-    scatter.values = codes.map! { |code|
-      new_scatter_point(code.commit, code.coverage, code.tip)
-    }
-    scatter.set_dot_style("dot")
-    chart.add_element(scatter)
   end
   
   def new_scatter_point(x, y, tooltip)

@@ -1,6 +1,5 @@
 class Measurement::Complexity
   include Measurement::MeasurementParser
-  
   def parse project_name
     parse_file_to_line(project_name) do |codes, line|      
       tmp = line.split(":")
