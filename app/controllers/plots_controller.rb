@@ -26,11 +26,12 @@ class PlotsController < ApplicationController
     add_element_to_chart_for_each_code(chart, codes) do |code|
       new_scatter_point(code.commit, instance_eval("code.#{measurement_name}"), code.tip)
     end
-
-    chart.set_x_legend(x_legend)
-    chart.set_x_axis(x_axis(max_commit))
     
-    add_axis(chart, max_commit, max_coverage, "Coverage")
+    chart.set_x_axis(x_axis(max_commit))
+    chart.set_x_legend(x_legend)
+    
+    chart.set_y_axis(y_axis(max_coverage))
+    chart.set_y_legend(y_legend(measurement_name))
 
     render :text => chart.to_s
   end
@@ -81,14 +82,20 @@ class PlotsController < ApplicationController
     x_legend
   end
   
-  def add_axis(chart, max_x, max_y, y_label)
-  
+  def y_axis(max_y)
     y = XAxis.new
     y.set_range(0, max_y+ 10, max_y/10)
+    y
+  end
+  
+  def y_legend y_label
     y_legend = YLegend.new(y_label)
     y_legend.set_style('{font-size: 24px; color: #770077}')
-    chart.set_y_legend(y_legend)
-    chart.set_y_axis(y)
+    y_legend
+  end
+  
+  def add_axis(chart, max_x, max_y, y_label)
+
   end
   
   def new_scatter_point(x, y, tooltip)
