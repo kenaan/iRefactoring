@@ -54,21 +54,21 @@ class PlotsController < ApplicationController
   end
   
   def convert_codes_to_scatter_point(codes, &block)
-     scatter = Scatter.new('#FFD600', 10) 
-     scatter.values = codes.map! { |code|
-       yield(code)
-     }
-     scatter.set_dot_style("dot")
-     scatter
+    scatter = Scatter.new('#FFD600', 10) 
+    scatter.values = codes.map! { |code|
+      yield(code)
+    }
+    scatter.set_dot_style("dot")
+    scatter
   end
   
   def new_scatter_point(x, y, tooltip)
-    s = Star.new()
-    s.set_position(x,y)
-    s.size=10
-    s.set_tooltip(tooltip)
-    s.set_colour('#8B1D55')
-    s
+    star = Star.new()
+    star.set_position(x,y)
+    star.size=10
+    star.set_tooltip(tooltip)
+    star.set_colour('#8B1D55')
+    star
   end
 end
 
