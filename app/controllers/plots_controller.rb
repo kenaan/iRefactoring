@@ -4,44 +4,33 @@ class PlotsController < ApplicationController
     @coverage_graph = open_flash_chart_object(750,450, project_coverage_plot_path(params[:id]))
     render :layout => false
   end
+    
+  def project_coverage_plot
+    project_plot("coverage")
+  end
 
   def project_complexity_plot
-    chart = OpenFlashChart.new
-    project = Project.find(params[:id])
-    add_title(chart, project.name, "Complexity vs. Commits")
-
-    codes = read(project)
-    max_commit = codes.map {|code| code.commit}.max
-    max_complexity = codes.map {|code| code.complexity}.max
-    
-    add_element_to_chart_for_each_code(chart, codes) do |code|
-      new_scatter_point(code.commit, code.complexity, code.tip)
-    end
-    
-    add_axis(chart, max_commit, max_complexity, "Complexity")
-    
-    render :text => chart.to_s
-  end
-  
-  def project_coverage_plot
-    chart = OpenFlashChart.new
-    project = Project.find(params[:id])
-    add_title(chart, project.name, "Coverage vs. Commits")
-
-    codes = read(project)
-    max_commit = codes.map {|code| code.commit}.max
-    max_coverage = codes.map {|code| code.coverage}.max
-    
-    add_element_to_chart_for_each_code(chart, codes) do |code|
-      new_scatter_point(code.commit, code.coverage, code.tip)
-    end
-    
-    add_axis(chart, max_commit, max_coverage, "Coverage")
-    
-    render :text => chart.to_s
-  end
+    project_plot("complexity")
+  end  
   
   private
+  def project_plot measurement_name
+    chart = OpenFlashChart.new
+    project = Project.find(params[:id])
+    chart.set_title(title(project.name, measurement_name + " vs. commits"))
+
+    codes = read(project)
+    max_commit = codes.map {|code| code.commit}.max
+    max_coverage = codes.map {|code| instance_eval("code.#{measurement_name}")}.max
+
+    add_element_to_chart_for_each_code(chart, codes) do |code|
+      new_scatter_point(code.commit, instance_eval("code.#{measurement_name}"), code.tip)
+    end
+
+    add_axis(chart, max_commit, max_coverage, "Coverage")
+
+    render :text => chart.to_s
+  end
   
   def add_element_to_chart_for_each_code(chart, codes, &block)
      scatter = Scatter.new('#FFD600', 10) 
@@ -75,6 +64,12 @@ class PlotsController < ApplicationController
     title = Title.new(project_name + ": " + measurement)
     title.set_style('{font-size: 29px; color: #771177}')
     chart.set_title(title)
+  end
+  
+  def title(project_name, measurement)
+    title = Title.new(project_name + ": " + measurement)
+    title.set_style('{font-size: 29px; color: #771177}')
+    title
   end
   
   def add_axis(chart, max_x, max_y, y_label)
