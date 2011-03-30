@@ -14,18 +14,18 @@ class PlotsController < ApplicationController
   end  
   
   private
-  def project_plot measurement
+  def project_plot measurement_name
     project = Project.find(params[:id])
 
     codes = read(project)
     max_commit = codes.map {|code| code.commit}.max
-    max_coverage = codes.map {|code| instance_eval("code.#{measurement}")}.max
+    max_measurement_result = codes.map {|code| instance_eval("code.#{measurement_name}")}.max
 
     scatter = convert_codes_to_scatter_point(codes) do |code|
-      new_scatter_point(code.commit, instance_eval("code.#{measurement}"), code.tip)
+      new_scatter_point(code.commit, instance_eval("code.#{measurement_name}"), code.tip)
     end
 
-    graph = Graph.new(project.name, measurement, max_commit, max_coverage)
+    graph = Graph.new(project.name, measurement_name, max_commit, max_measurement_result)
     graph.add_element(scatter)
     render :text => graph.to_s
   end

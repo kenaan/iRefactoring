@@ -1,12 +1,12 @@
 class Graph
   include OpenFlashChart
-  def initialize project_name, measurement, max_x, max_y
+  def initialize project_name, measurement_name, max_x, max_y
     @chart = OpenFlashChart.new
     @chart.set_title(create_title(project_name))
     @chart.set_x_axis(create_x_axis(max_x))
     @chart.set_x_legend(create_x_legend)
     @chart.set_y_axis(create_y_axis(max_y))
-    @chart.set_y_legend(create_y_legend(measurement))
+    @chart.set_y_legend(create_y_legend(measurement_name))
   end
   
   def add_element scatter
