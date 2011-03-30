@@ -35,18 +35,22 @@ class PlotsController < ApplicationController
     complexity = project.read(Measurement::Complexity.new)
     coverages = project.read(Measurement::Coverage.new)
     
-    complexity.each_key{ |key|
-      commit = commits[key]
-      if(!commit.nil?)
-        complexity[key].commit = commit
-      end
-      
-      c = coverages[key]
-      if(!c.nil?)
-        complexity[key].coverage = c.coverage
-      end
+    complexity.each_key{ |code_name|
+      update_code_with_measurement(code_name, commits){ |commit|
+        complexity[code_name].commit = commit
+      }
+      update_code_with_measurement(code_name, coverages){ |coverage|
+        complexity[code_name].coverage = coverage
+      }
     }
     return complexity.values
+  end
+  
+  def update_code_with_measurement code_name, measurements, &block
+    measurement = measurements[code_name]
+    if(!measurement.nil?)
+      yield(measurement)
+    end
   end
   
   def convert_codes_to_scatter_point(codes, &block)
