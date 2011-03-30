@@ -27,6 +27,9 @@ class PlotsController < ApplicationController
       new_scatter_point(code.commit, instance_eval("code.#{measurement_name}"), code.tip)
     end
 
+    chart.set_x_legend(x_legend)
+    chart.set_x_axis(x_axis(max_commit))
+    
     add_axis(chart, max_commit, max_coverage, "Coverage")
 
     render :text => chart.to_s
@@ -60,25 +63,25 @@ class PlotsController < ApplicationController
     return complexity.values
   end
   
-  def add_title(chart, project_name, measurement)
-    title = Title.new(project_name + ": " + measurement)
-    title.set_style('{font-size: 29px; color: #771177}')
-    chart.set_title(title)
-  end
-  
   def title(project_name, measurement)
     title = Title.new(project_name + ": " + measurement)
     title.set_style('{font-size: 29px; color: #771177}')
     title
   end
   
-  def add_axis(chart, max_x, max_y, y_label)
+  def x_axis(max_x)
     x = XAxis.new
     x.set_range(0, max_x + 10, max_x/20)
+    x
+  end
+  
+  def x_legend
     x_legend = XLegend.new("commits per file")
     x_legend.set_style('{font-size: 24px; color: #778877}')
-    chart.set_x_legend(x_legend)
-    chart.set_x_axis(x)
+    x_legend
+  end
+  
+  def add_axis(chart, max_x, max_y, y_label)
   
     y = XAxis.new
     y.set_range(0, max_y+ 10, max_y/10)
