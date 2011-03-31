@@ -1,11 +1,14 @@
-:vcs: Hg
+# :vcs: Hg
+:vcs: Git
 
-:language: csharp
+# :language: csharp
+:language: ruby
 
 :projects:
-    - admin
-    - admin-cli
-    - crm
-    - framework
-    - mytaxes
-    - questionnaire
+    # - admin
+    # - admin-cli
+    # - crm
+    # - framework
+    # - mytaxes
+    # - questionnaire
+    - irefactoring
