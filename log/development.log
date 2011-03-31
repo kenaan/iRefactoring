@@ -28701,3 +28701,59 @@ Completed in 18ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/admin-cli
 Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-03-29 22:24:18) [GET]
   Parameters: {"id"=>"admin-cli"}
 Completed in 18ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/admin-cli/plot/coverage]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-03-31 08:54:17) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-31 08:54:19) [GET]
+  Parameters: {"authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"admin"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/admin?authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-31 08:54:19) [GET]
+  Parameters: {"id"=>"admin"}
+Completed in 44ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/admin/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-03-31 08:54:19) [GET]
+  Parameters: {"id"=>"admin"}
+Completed in 49ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/admin/plot/coverage]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-31 08:54:20) [GET]
+  Parameters: {"authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"questionnaire"}
+Rendering plots/show
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/plots/questionnaire?authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-31 08:54:21) [GET]
+  Parameters: {"id"=>"questionnaire"}
+Completed in 61ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/questionnaire/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-03-31 08:54:21) [GET]
+  Parameters: {"id"=>"questionnaire"}
+Completed in 63ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/questionnaire/plot/coverage]
+
+
+Processing StaticPagesController#acknowledgement (for 127.0.0.1 at 2011-03-31 08:58:22) [GET]
+Rendering template within layouts/application
+Rendering static_pages/acknowledgement
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/acknowledgement]
+
+
+Processing StaticPagesController#configuration (for 127.0.0.1 at 2011-03-31 08:58:24) [GET]
+Rendering template within layouts/application
+Rendering static_pages/configuration
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/configuration]
+
+
+Processing StaticPagesController#introduction (for 127.0.0.1 at 2011-03-31 08:58:25) [GET]
+Rendering template within layouts/application
+Rendering static_pages/introduction
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/]

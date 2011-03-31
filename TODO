@@ -16,6 +16,7 @@ TODO
 * Improve User experience
 
 - using bmc sample to fix the hardcoded svn parser
+- add test for different scenarios ( hg&java, hg&csharp, svn&java, svn&csharp, hg&c++ ...)
 - make configuration easier (regex for parse vcs log?)
 
 - improve user guide

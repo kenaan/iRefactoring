@@ -1,8 +1,14 @@
-:name: CWP
 # :vcs: Svn
 :vcs: Hg
+# :vcs: Git
+# :vcs: Clearcase
+
 # :language: java
 :language: csharp
+# :language: ruby
+# :language: c++
+
+
 :projects:
     - admin
     - admin-cli
@@ -10,6 +16,3 @@
     - framework
     - mytaxes
     - questionnaire
-    - questionnaire-admin-cqs
-    - questionnaire-admin-gde
-    - questionnaire-admin-integration
