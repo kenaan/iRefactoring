@@ -17,7 +17,7 @@ class PlotsController < ApplicationController
   def project_plot measurement_name
     project = Project.find(params[:id])
 
-    codes = read_measurement_result(project, measurement_name)
+    codes = read_measurement(project, measurement_name)
     max_commit = codes.map {|code| code.commit}.max
     max_measurement_result = codes.map {|code| instance_eval("code.#{measurement_name}")}.max
 
@@ -30,7 +30,7 @@ class PlotsController < ApplicationController
     render :text => graph.to_s
   end
   
-  def read_measurement_result project, measurement_name
+  def read_measurement project, measurement_name
     measurement_results = project.read(instance_eval("Measurement::#{measurement_name.capitalize}.new()"))
 
     measurement_results.each_key{ |code_name|
