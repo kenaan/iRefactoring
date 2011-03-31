@@ -13,7 +13,7 @@ class Vcs::Svn
   end
   
   def read_line_into_commits line, commits
-    code_changed = change_in_one_commit(line)
+    code_changed = changes_in_one_commit(line)
     return if code_changed.nil?
     if(commits.has_key?(code_changed))
       commits[code_changed] = commits[code_changed] + 1
@@ -22,7 +22,7 @@ class Vcs::Svn
     end
   end
   
-  def change_in_one_commit line
+  def changes_in_one_commit line
     code = line.split(" ")[1]
     java_code = code.split("java/")[1]
     return if java_code.nil? 

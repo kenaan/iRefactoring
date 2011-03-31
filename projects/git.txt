@@ -1,3 +1,46 @@
+commit 39af90a8b65c67d17bb5de46fdbc0eb2a177036f
+Author: Jacky Li <veryfaint@gmail.com>
+Date:   Thu Mar 31 23:46:13 2011 +0800
+
+    rename method
+
+M	app/controllers/plots_controller.rb
+
+commit 25cf8f6cbe993b4b364a0f9ec20a27d13d3e91c9
+Author: Jacky Li <veryfaint@gmail.com>
+Date:   Thu Mar 31 23:45:41 2011 +0800
+
+    refactoring
+
+M	app/controllers/plots_controller.rb
+M	app/models/code.rb
+
+commit 0d46e9a4ea6e4671db51f22ddb1d416d20566330
+Author: Jacky Li <veryfaint@gmail.com>
+Date:   Thu Mar 31 17:38:55 2011 +0800
+
+    begin to support ruby
+
+M	app/models/vcs/log_parser.rb
+
+commit e62c0c9febdc265d2560cd7bffc852c5c876936e
+Author: Jacky Li <veryfaint@gmail.com>
+Date:   Thu Mar 31 17:38:23 2011 +0800
+
+    begin to support git
+
+A	app/models/vcs/git.rb
+M	config/project.yml
+A	lib/rcov_parser.rb
+M	log/development.log
+M	log/test.log
+A	projects/git.txt
+A	projects/irefactoring/coverage.txt
+A	sample/irefactoring/index.html
+A	spec/fixtures/git.log
+D	spec/fixtures/hg_and_csharp_projects/admin/sources_full.html
+D	spec/fixtures/svn_and_java_projects/edcore/sonar.txt
+
 commit 8353858c6f4020d7e80e3dee424c9f954e748baa
 Author: Jacky Li <veryfaint@gmail.com>
 Date:   Thu Mar 31 14:07:37 2011 +0800
