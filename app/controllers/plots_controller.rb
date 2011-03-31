@@ -17,12 +17,12 @@ class PlotsController < ApplicationController
   def project_plot measurement_name
     project = Project.find(params[:id])
 
-    codes = read(project)
+    codes = read_measurement_result(project, measurement_name)
     max_commit = codes.map {|code| code.commit}.max
     max_measurement_result = codes.map {|code| instance_eval("code.#{measurement_name}")}.max
 
     scatter = convert_codes_to_scatter_point(codes) do |code|
-      new_scatter_point(code.commit, instance_eval("code.#{measurement_name}"), code.tip)
+      new_scatter_point(code.commit, instance_eval("code.#{measurement_name}"), instance_eval("code.#{measurement_name}_tip"))
     end
 
     graph = Graph.new(project.name, measurement_name, max_commit, max_measurement_result)
@@ -30,26 +30,21 @@ class PlotsController < ApplicationController
     render :text => graph.to_s
   end
   
-  def read project
-    commits = $code_commits
-    complexity = project.read(Measurement::Complexity.new)
-    coverages = project.read(Measurement::Coverage.new)
-    
-    complexity.each_key{ |code_name|
-      update_code_with_measurement(code_name, commits){ |commit|
-        complexity[code_name].commit = commit
-      }
-      update_code_with_measurement(code_name, coverages){ |code|
-        complexity[code_name].coverage = code.coverage
+  def read_measurement_result project, measurement_name
+    measurement_results = project.read(instance_eval("Measurement::#{measurement_name.capitalize}.new()"))
+
+    measurement_results.each_key{ |code_name|
+      update_code_with_commits(code_name, $code_commits){ |commit|
+        measurement_results[code_name].commit = commit
       }
     }
-    return complexity.values
+    return measurement_results.values
   end
-  
-  def update_code_with_measurement code_name, measurements, &block
-    measurement = measurements[code_name]
-    if(!measurement.nil?)
-      yield(measurement)
+
+  def update_code_with_commits code_name, commits, &block
+    commit = commits[code_name]
+    if(!commit.nil?)
+      yield(commit)
     end
   end
   

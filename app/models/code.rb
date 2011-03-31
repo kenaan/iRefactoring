@@ -11,4 +11,12 @@ class Code
   def tip
     name + ": commit=> " + (commit.to_s) + " complexity=> " + (complexity.to_s) + " coverage=> " + (coverage.to_s)
   end
+  
+  def complexity_tip
+    name + ": commit=> " + (commit.to_s) + " complexity=> " + (complexity.to_s)
+  end
+  
+  def coverage_tip
+    name + ": commit=> " + (commit.to_s) + " coverage=> " + (coverage.to_s)
+  end
 end
