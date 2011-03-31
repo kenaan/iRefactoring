@@ -6,11 +6,11 @@ class PlotsController < ApplicationController
   end
     
   def project_coverage_plot
-    project_plot("coverage")
+      project_plot("coverage")
   end
 
   def project_complexity_plot
-    project_plot("complexity")
+      project_plot("complexity") 
   end  
   
   private

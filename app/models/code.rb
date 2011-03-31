@@ -8,10 +8,6 @@ class Code
     @coverage = coverage
   end
   
-  def tip
-    name + ": commit=> " + (commit.to_s) + " complexity=> " + (complexity.to_s) + " coverage=> " + (coverage.to_s)
-  end
-  
   def complexity_tip
     name + ": commit=> " + (commit.to_s) + " complexity=> " + (complexity.to_s)
   end
