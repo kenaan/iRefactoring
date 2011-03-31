@@ -8,6 +8,7 @@ module Vcs::CodePostfix
   def source_code_postfix
     return ".cs" if @language == "csharp"
     return ".java" if @language == "java"
+    return ".rb" if @language == "ruby"
     ""
   end
 end
