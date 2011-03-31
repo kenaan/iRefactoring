@@ -1,18 +1,14 @@
 class PlotsController < ApplicationController
   def show
     project_name = params[:id]
-    if(measurement_file_exist? project_name, "complexity")
-      @complexity_graph = open_flash_chart_object(750,450, project_complexity_plot_path(project_name))
-    else
-      @complexity_graph = "Error: project/" + project_name + "/complexity.txt cannot be found"
-    end
-    
-    if(measurement_file_exist? project_name, "coverage")
-      @coverage_graph = open_flash_chart_object(750,450, project_coverage_plot_path(project_name))
-    else
-      @coverage_graph = "Error : project/" + project_name + "/coverage.txt cannot be found"
-    end
-    
+    ["complexity", "coverage"].each{ |measurement_name|
+      if(measurement_file_exist? project_name, measurement_name)
+        instance_eval("@#{measurement_name}_graph = 
+                open_flash_chart_object(750,450, project_#{measurement_name}_plot_path(project_name))")
+      else
+        instance_eval("@#{measurement_name}_graph = 'Error: project/' + project_name + '/' + measurement_name + '.txt cannot be found'")
+      end
+    }    
     render :layout => false
   end
     
@@ -38,11 +34,11 @@ class PlotsController < ApplicationController
     max_commit = codes.map {|code| code.commit}.max
     max_measurement_result = codes.map {|code| instance_eval("code.#{measurement_name}")}.max
 
+    graph = Graph.new(project.name, measurement_name, max_commit, max_measurement_result)
+    
     scatter = convert_codes_to_scatter_point(codes) do |code|
       new_scatter_point(code.commit, instance_eval("code.#{measurement_name}"), instance_eval("code.#{measurement_name}_tip"))
     end
-
-    graph = Graph.new(project.name, measurement_name, max_commit, max_measurement_result)
     graph.add_element(scatter)
     render :text => graph.to_s
   end
