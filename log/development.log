@@ -30490,3 +30490,36 @@ Processing PlotsController#show (for 127.0.0.1 at 2011-04-01 01:22:10) [GET]
   Parameters: {"authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"irefactoring"}
 Rendering plots/show
 Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/irefactoring?authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-01 01:22:50) [GET]
+  Parameters: {"authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"irefactoring"}
+Rendering plots/show
+Completed in 74ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/irefactoring?authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-04-01 01:22:50) [GET]
+  Parameters: {"id"=>"irefactoring"}
+Completed in 22ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/irefactoring/plot/coverage]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-01 01:23:19) [GET]
+  Parameters: {"authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"irefactoring"}
+Rendering plots/show
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/irefactoring?authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-04-01 01:23:19) [GET]
+  Parameters: {"id"=>"irefactoring"}
+Completed in 20ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/irefactoring/plot/coverage]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-01 01:25:03) [GET]
+  Parameters: {"authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"irefactoring"}
+Rendering plots/show
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/irefactoring?authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-04-01 01:25:03) [GET]
+  Parameters: {"id"=>"irefactoring"}
+Completed in 18ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/irefactoring/plot/coverage]

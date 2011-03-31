@@ -1,16 +1,16 @@
 class PlotsController < ApplicationController
   def show
     project_name = params[:id]
-    if(complexity_file_exist? project_name)
+    if(measurement_file_exist? project_name, "complexity")
       @complexity_graph = open_flash_chart_object(750,450, project_complexity_plot_path(project_name))
     else
-      @complexity_graph = "project/" + project_name + "/complexity.txt cannot be found"
+      @complexity_graph = "Error: project/" + project_name + "/complexity.txt cannot be found"
     end
     
-    if(coverage_file_exist? project_name)
+    if(measurement_file_exist? project_name, "coverage")
       @coverage_graph = open_flash_chart_object(750,450, project_coverage_plot_path(project_name))
     else
-      @coverage_graph = "project/" + project_name + "/coverage.txt cannot be found"
+      @coverage_graph = "Error : project/" + project_name + "/coverage.txt cannot be found"
     end
     
     render :layout => false
@@ -25,15 +25,11 @@ class PlotsController < ApplicationController
   end  
   
   private
-  def complexity_file_exist? project_name
-    complexity = Measurement::Complexity.new
-    complexity.file_exist? project_name
-  end
   
-  def coverage_file_exist? project_name
-    coverage = Measurement::Coverage.new
-    coverage.file_exist? project_name
-  end 
+  def measurement_file_exist? project_name, measurement_name
+    measurement_parser = instance_eval("Measurement::#{measurement_name.capitalize}.new()")
+    measurement_parser.file_exist? project_name
+  end
   
   def project_plot measurement_name
     project = Project.find(params[:id])
