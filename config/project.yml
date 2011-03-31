@@ -1,13 +1,6 @@
-# :vcs: Svn
 :vcs: Hg
-# :vcs: Git
-# :vcs: Clearcase
 
-# :language: java
 :language: csharp
-# :language: ruby
-# :language: c++
-
 
 :projects:
     - admin

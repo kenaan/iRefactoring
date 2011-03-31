@@ -5,7 +5,7 @@ describe Vcs::Svn do
     DDR_ENV[:vcs] = "Svn"
     DDR_ENV[:language] = "java"
     @parser = Vcs::Svn.new()
-    DDR_ENV[:project_root] = File.join(RAILS_ROOT+ "/spec/fixtures/sonar_and_svn_projects")
+    DDR_ENV[:project_root] = File.join(RAILS_ROOT+ "/spec/fixtures/svn_and_java_projects")
   end
   
   it 'should ignore commits which is not source code' do

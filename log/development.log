@@ -28757,3 +28757,25 @@ Processing StaticPagesController#introduction (for 127.0.0.1 at 2011-03-31 08:58
 Rendering template within layouts/application
 Rendering static_pages/introduction
 Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-03-31 10:21:25) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-03-31 10:21:26) [GET]
+  Parameters: {"authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"mytaxes"}
+Rendering plots/show
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/mytaxes?authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-03-31 10:21:27) [GET]
+  Parameters: {"id"=>"mytaxes"}
+Completed in 401ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/mytaxes/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-03-31 10:21:27) [GET]
+  Parameters: {"id"=>"mytaxes"}
+Completed in 168ms (View: 1, DB: 0) | 200 OK [http://localhost/projects/mytaxes/plot/coverage]
