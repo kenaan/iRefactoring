@@ -34,7 +34,7 @@ class PlotsController < ApplicationController
   def project_plot measurement_name
     project = Project.find(params[:id])
 
-    codes = read_measurement(project, measurement_name)
+    codes = project.read_code_measurement(measurement_name)
     max_commit = codes.map {|code| code.commit}.max
     max_measurement_result = codes.map {|code| instance_eval("code.#{measurement_name}")}.max
 
@@ -45,24 +45,6 @@ class PlotsController < ApplicationController
     graph = Graph.new(project.name, measurement_name, max_commit, max_measurement_result)
     graph.add_element(scatter)
     render :text => graph.to_s
-  end
-  
-  def read_measurement project, measurement_name
-    measurement_results = project.read(instance_eval("Measurement::#{measurement_name.capitalize}.new()"))
-
-    measurement_results.each_key{ |code_name|
-      update_code_with_commits(code_name, $code_commits){ |commit|
-        measurement_results[code_name].commit = commit
-      }
-    }
-    return measurement_results.values
-  end
-
-  def update_code_with_commits code_name, commits, &block
-    commit = commits[code_name]
-    if(!commit.nil?)
-      yield(commit)
-    end
   end
   
   def convert_codes_to_scatter_point(codes, &block)

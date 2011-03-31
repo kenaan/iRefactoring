@@ -30523,3 +30523,25 @@ Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/irefactoring?
 Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-04-01 01:25:03) [GET]
   Parameters: {"id"=>"irefactoring"}
 Completed in 18ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/irefactoring/plot/coverage]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-01 01:29:09) [GET]
+  Parameters: {"authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"irefactoring"}
+Rendering plots/show
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/irefactoring?authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-04-01 01:29:09) [GET]
+  Parameters: {"id"=>"irefactoring"}
+Completed in 33ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/irefactoring/plot/coverage]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-01 01:30:09) [GET]
+  Parameters: {"authenticity_token"=>"d64535210a3479191d03928c9f01176be6d2c259", "id"=>"irefactoring"}
+Rendering plots/show
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/irefactoring?authenticity_token=d64535210a3479191d03928c9f01176be6d2c259]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-04-01 01:30:09) [GET]
+  Parameters: {"id"=>"irefactoring"}
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/irefactoring/plot/coverage]
