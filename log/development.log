@@ -30850,3 +30850,187 @@ Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/irefactoring?
 Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-04-01 02:57:25) [GET]
   Parameters: {"id"=>"irefactoring"}
 Completed in 20ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/irefactoring/plot/coverage]
+
+
+Processing StaticPagesController#introduction (for 127.0.0.1 at 2011-04-01 18:37:18) [GET]
+Rendering template within layouts/application
+Rendering static_pages/introduction
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-04-01 18:37:20) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-01 18:37:21) [GET]
+  Parameters: {"authenticity_token"=>"c6099f68a36de075ed02d159cf4d4680b201611d", "id"=>"editor"}
+Rendering plots/show
+Completed in 56ms (View: 3, DB: 0) | 200 OK [http://localhost/plots/editor?authenticity_token=c6099f68a36de075ed02d159cf4d4680b201611d]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-04-01 18:37:21) [GET]
+  Parameters: {"id"=>"editor"}
+Completed in 176ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/editor/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-04-01 18:37:22) [GET]
+  Parameters: {"id"=>"editor"}
+Completed in 70ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/editor/plot/coverage]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-01 18:37:25) [GET]
+  Parameters: {"authenticity_token"=>"c6099f68a36de075ed02d159cf4d4680b201611d", "id"=>"editor"}
+Rendering plots/show
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/editor?authenticity_token=c6099f68a36de075ed02d159cf4d4680b201611d]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-04-01 18:37:26) [GET]
+  Parameters: {"id"=>"editor"}
+Completed in 148ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/editor/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-04-01 18:37:26) [GET]
+  Parameters: {"id"=>"editor"}
+Completed in 77ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/editor/plot/coverage]
+
+
+Processing StaticPagesController#introduction (for 127.0.0.1 at 2011-04-02 00:55:01) [GET]
+Rendering template within layouts/application
+Rendering static_pages/introduction
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-04-02 00:55:03) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 78ms (View: 76, DB: 0) | 200 OK [http://localhost/projects]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-02 00:55:04) [GET]
+  Parameters: {"authenticity_token"=>"c6099f68a36de075ed02d159cf4d4680b201611d", "id"=>"editor"}
+Rendering plots/show
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/editor?authenticity_token=c6099f68a36de075ed02d159cf4d4680b201611d]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-04-02 00:55:05) [GET]
+  Parameters: {"id"=>"editor"}
+Completed in 64ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/editor/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-04-02 00:55:05) [GET]
+  Parameters: {"id"=>"editor"}
+Completed in 130ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/editor/plot/coverage]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-02 01:00:55) [GET]
+  Parameters: {"authenticity_token"=>"c6099f68a36de075ed02d159cf4d4680b201611d", "id"=>"editor"}
+Rendering plots/show
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/editor?authenticity_token=c6099f68a36de075ed02d159cf4d4680b201611d]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-04-02 01:00:56) [GET]
+  Parameters: {"id"=>"editor"}
+Completed in 153ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/editor/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-04-02 01:00:56) [GET]
+  Parameters: {"id"=>"editor"}
+Completed in 71ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/editor/plot/coverage]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-02 01:03:35) [GET]
+  Parameters: {"authenticity_token"=>"c6099f68a36de075ed02d159cf4d4680b201611d", "id"=>"editor"}
+Rendering plots/show
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/editor?authenticity_token=c6099f68a36de075ed02d159cf4d4680b201611d]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-04-02 01:03:36) [GET]
+  Parameters: {"id"=>"editor"}
+Completed in 69ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/editor/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-04-02 01:03:36) [GET]
+  Parameters: {"id"=>"editor"}
+Completed in 137ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/editor/plot/coverage]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-02 01:08:06) [GET]
+  Parameters: {"authenticity_token"=>"c6099f68a36de075ed02d159cf4d4680b201611d", "id"=>"editor"}
+Rendering plots/show
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/plots/editor?authenticity_token=c6099f68a36de075ed02d159cf4d4680b201611d]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-04-02 01:08:08) [GET]
+  Parameters: {"id"=>"editor"}
+Completed in 64ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/editor/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-04-02 01:08:08) [GET]
+  Parameters: {"id"=>"editor"}
+Completed in 65ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/editor/plot/coverage]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-02 01:17:39) [GET]
+  Parameters: {"authenticity_token"=>"c6099f68a36de075ed02d159cf4d4680b201611d", "id"=>"editor"}
+Rendering plots/show
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/editor?authenticity_token=c6099f68a36de075ed02d159cf4d4680b201611d]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-04-02 01:17:41) [GET]
+  Parameters: {"id"=>"editor"}
+Completed in 153ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/editor/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-04-02 01:17:41) [GET]
+  Parameters: {"id"=>"editor"}
+Completed in 71ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/editor/plot/coverage]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-02 01:23:37) [GET]
+  Parameters: {"authenticity_token"=>"c6099f68a36de075ed02d159cf4d4680b201611d", "id"=>"editor"}
+Rendering plots/show
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/editor?authenticity_token=c6099f68a36de075ed02d159cf4d4680b201611d]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-04-02 01:23:37) [GET]
+  Parameters: {"id"=>"editor"}
+Completed in 161ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/editor/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-04-02 01:23:37) [GET]
+  Parameters: {"id"=>"editor"}
+Completed in 75ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/editor/plot/coverage]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-02 01:24:18) [GET]
+  Parameters: {"authenticity_token"=>"c6099f68a36de075ed02d159cf4d4680b201611d", "id"=>"editor"}
+Rendering plots/show
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/editor?authenticity_token=c6099f68a36de075ed02d159cf4d4680b201611d]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-04-02 01:24:18) [GET]
+  Parameters: {"id"=>"editor"}
+Completed in 156ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/editor/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-04-02 01:24:19) [GET]
+  Parameters: {"id"=>"editor"}
+Completed in 69ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/editor/plot/coverage]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-02 01:27:15) [GET]
+  Parameters: {"authenticity_token"=>"c6099f68a36de075ed02d159cf4d4680b201611d", "id"=>"editor"}
+Rendering plots/show
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/editor?authenticity_token=c6099f68a36de075ed02d159cf4d4680b201611d]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-04-02 01:27:16) [GET]
+  Parameters: {"id"=>"editor"}
+Completed in 159ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/editor/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-04-02 01:27:16) [GET]
+  Parameters: {"id"=>"editor"}
+Completed in 81ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/editor/plot/coverage]

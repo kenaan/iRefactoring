@@ -13,15 +13,12 @@ class Vcs::Hg
   
   def read_line_into_commits line, commits
     changes_in_one_commit(line).each{|change|
-      if(commits.has_key?(change))
-        commits[change] = commits[change] + 1
-      else
-        commits[change] = 1
-      end
+      put_code_change_into_commits(change, commits)
     }
   end
   
   def changes_in_one_commit line
     line.split(" ").reject{|c| c == "file:" || !(c.ends_with?(source_code_postfix))}
   end
+
 end

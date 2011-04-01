@@ -7,25 +7,17 @@ class Vcs::Svn
   end
 
   private
-  
   def is_source_code_log? line
-    line.end_with? source_code_postfix and (line.start_with? "M " or line.start_with? "A ")
+     result = (line.end_with? source_code_postfix) and (line.start_with? "M " or line.start_with? "A ")
+     result
   end
   
   def read_line_into_commits line, commits
     code_changed = changes_in_one_commit(line)
-    return if code_changed.nil?
-    if(commits.has_key?(code_changed))
-      commits[code_changed] = commits[code_changed] + 1
-    else
-      commits[code_changed] = 1
-    end
+    put_code_change_into_commits(code_changed, commits)
   end
   
   def changes_in_one_commit line
-    code = line.split(" ")[1]
-    java_code = code.split("java/")[1]
-    return if java_code.nil? 
-    java_code.gsub("/", ".").slice(0, java_code.size - source_code_postfix.size)
+    line.split(" ")[1]
   end
 end

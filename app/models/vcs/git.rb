@@ -14,11 +14,7 @@ class Vcs::Git
   
   def read_line_into_commits line, commits
     code_changed = changes_in_one_commit(line)
-    if(commits.has_key?(code_changed))
-      commits[code_changed] = commits[code_changed] + 1
-    else
-      commits[code_changed] = 1
-    end
+    put_code_change_into_commits(code_changed, commits)
   end
   
   def changes_in_one_commit line

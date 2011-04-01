@@ -1,9 +1,14 @@
 # :vcs: Hg
-:vcs: Git
+# :vcs: Git
+:vcs: Svn
 
 # :language: csharp
-:language: ruby
+# :language: ruby
+:language: java
 
+#only works for java
+:classpath: /workflow/trunk/editor/src/main/java/
+        
 :projects:
     # - admin
     # - admin-cli
@@ -11,4 +16,5 @@
     # - framework
     # - mytaxes
     # - questionnaire
-    - irefactoring
+    # - irefactoring
+    - editor
