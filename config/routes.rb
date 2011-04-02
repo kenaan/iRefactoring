@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.root :controller => 'static_pages', :action => 'introduction'
+  map.root :controller => 'projects', :action => 'index'
   
   map.resources :plots
   map.resources :user_guide
