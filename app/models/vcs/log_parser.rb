@@ -9,6 +9,7 @@ module Vcs::CodePostfix
     return ".cs" if @language == "csharp"
     return ".java" if @language == "java"
     return ".rb" if @language == "ruby"
+    return ".py" if @language == "python"
     ""
   end
 end
