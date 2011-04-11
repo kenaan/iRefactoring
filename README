@@ -20,8 +20,11 @@
 * Configuration
 
  * 配置文件
+
 项目的配置文件为config/project.yml。
+
 下面通过一个例子来讲述该配置文件的用法。
+
 假如你有两个项目，project1和project2，它们同处在同一版本仓库的trunk目录下，它们用的都是c#（iRefactoring目前不支持多语言项目），使用的版本控制工具是Hg，则project.yml应该写成这样：
 
    :vcs: Hg
@@ -31,10 +34,15 @@
       - project2
 
 * 数据导入
+
 系统报表需要三部分数据：代码提交的log，测试覆盖率，圈复杂度。
+
 log文件需要放在projects目录下，你可以用hg log -v >> hg.txt，或者svn log -v >> svn.txt，git log --name-status >> git.txt 来得到log文件，然后复制到projects目录。
+
 测试覆盖率和圈复杂度的数据文件都需要自己写脚本解析度量结果生成，前者命名为coverage.txt，后者命名为complexity.txt。其中每一行都是一个类的度量结果，格式为 classname:89% 或者 classname:100 。可以参见projects/example目录下的文件。
+
 注意：生成数据文件的关键点在于类名要跟log文件中的文件名保持一致。不相符的地方要进行转换，比如数据文件中用的是绝对路径，而 log中用的是相对路径，这就要在脚本中处理了。
+
 配置文件中有一项classpath是特别为java项目设置的，因为java的静态分析数据通常为 org.irefactoring.model.xxx这样的格式，而log文件中则会是全路径名，例如/src/main/java/org /irefactoring/model/xxx.java，于是你就需要进行这样的设置：
 
     :classpath:
