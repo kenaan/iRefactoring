@@ -23,8 +23,6 @@
 
 项目的配置文件为config/project.yml。
 
-下面通过一个例子来讲述该配置文件的用法。
-
 假如你有两个项目，project1和project2，它们同处在同一版本仓库的trunk目录下，它们用的都是c#（iRefactoring目前不支持多语言项目），使用的版本控制工具是Hg，则project.yml应该写成这样：
 
    :vcs: Hg
