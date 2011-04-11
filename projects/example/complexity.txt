@@ -46,7 +46,7 @@ edcore.editor.UserAddressController:12.0
 edcore.editor.JournalIssuesTaskController$IssueTaskModelBuilder:12.0
 edcore.editor.ManuscriptAssignmentBarredEditorUtil:12.0
 edcore.editor.UpdateBarredEditorsBROImpl:12.0
-edcore.editor.ManuscriptUserTasksController:11.0
+edcore.editor.ManuscriptUserTasksController:134.0
 edcore.editor.AssignManuscriptContactsBROImpl:10.0
 edcore.editor.EditorFilter:9.0
 edcore.editor.ChaseRevisionBROImpl:9.0
@@ -56,7 +56,7 @@ edcore.editor.ManuscriptDiaryViewHelper:8.0
 edcore.editor.ManuscriptDiaryController:7.5
 edcore.editor.UserDetailsController:7.0
 edcore.editor.ManuscriptHeadingFilter:7.0
-edcore.editor.ManuscriptPRTController:7.0
+edcore.editor.ManuscriptPRTController:127.0
 edcore.editor.TaskNotificationHandler:7.0
 edcore.editor.ManuscriptAbstractController:6.0
 edcore.editor.BaseResultTO:6.0
@@ -147,7 +147,7 @@ application.editor.action.UploadAction:60.0
 application.editor.action.SimilarAction:58.0
 application.editor.action.WaiverAction:53.0
 application.editor.action.ManuscriptHistoryViewAction:51.0
-application.editor.action.ManuscriptReviewerDetailsViewAction:51.0
+application.editor.action.ManuscriptReviewerDetailsViewAction:101.0
 application.editor.action.EditAction:42.0
 application.editor.action.ManuscriptDetailsConfirmAction:33.0
 application.editor.action.ManuscriptTransferViewAction:28.0
@@ -158,7 +158,7 @@ application.editor.action.ReplyAction:15.0
 application.editor.action.ChaseRevisionAction:13.0
 application.editor.action.ManuscriptDetailsUpdateAction:10.0
 application.editor.action.ArchiveAction:9.0
-application.editor.action.ManuscriptAssignmentUpdateAction:7.0
+application.editor.action.ManuscriptAssignmentUpdateAction:157.0
 application.editor.action.ManuscriptAssociatedViewAction:6.0
 application.editor.action.ManuscriptDetailsViewAction:5.5
 application.editor.action.DeleteAction:5.0

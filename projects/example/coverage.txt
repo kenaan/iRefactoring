@@ -55,7 +55,7 @@ edcore.editor.ManuscriptEventViewHelper:50.0%
 edcore.editor.ManuscriptAbstractViewHelper:55.6%
 edcore.editor.ManuscriptDetailsUpdateBPOImpl:58.3%
 edcore.editor.ManuscriptUserTasksForm:58.8%
-edcore.editor.ManuscriptAssignmentController:59.3%
+edcore.editor.ManuscriptAssignmentController:11.0%
 edcore.editor.ManuscriptFiguresController:62.4%
 edcore.editor.RefreshCacheController:66.7%
 edcore.editor.ManuscriptDiaryViewHelper:73.9%
