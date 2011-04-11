@@ -1,17 +1,17 @@
 # :vcs: Hg
-:vcs: Git
-# :vcs: Svn
+# :vcs: Git
+:vcs: Svn
 
 # :language: csharp
-:language: ruby
-# :language: java
+# :language: ruby
+:language: java
 
 #only works for java
-# :classpath: /workflow/trunk/editor/src/main/java/
+:classpath: /workflow/trunk/editor/src/main/java/
         
 :projects:
     # - framework
     # - mytaxes
     # - questionnaire
-    - irefactoring
-    # - editor
+    # - irefactoring
+    - example

@@ -31466,3 +31466,127 @@ Processing StaticPagesController#configuration (for 127.0.0.1 at 2011-04-04 13:5
 Rendering template within layouts/application
 Rendering static_pages/configuration
 Completed in 51ms (View: 36, DB: 0) | 200 OK [http://localhost/configuration]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-04-11 15:57:51) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 18ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-11 15:57:53) [GET]
+  Parameters: {"authenticity_token"=>"c6099f68a36de075ed02d159cf4d4680b201611d", "id"=>"example"}
+Rendering plots/show
+Completed in 39ms (View: 12, DB: 0) | 200 OK [http://localhost/plots/example?authenticity_token=c6099f68a36de075ed02d159cf4d4680b201611d]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-04-11 15:57:54) [GET]
+  Parameters: {"id"=>"example"}
+Completed in 117ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/example/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-04-11 15:57:56) [GET]
+  Parameters: {"id"=>"example"}
+Completed in 69ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/example/plot/coverage]
+
+
+Processing StaticPagesController#configuration (for 127.0.0.1 at 2011-04-11 15:59:01) [GET]
+Rendering template within layouts/application
+Rendering static_pages/configuration
+Completed in 26ms (View: 4, DB: 0) | 200 OK [http://localhost/configuration]
+
+
+Processing StaticPagesController#configuration (for 127.0.0.1 at 2011-04-11 15:59:36) [GET]
+Rendering template within layouts/application
+Rendering static_pages/configuration
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/configuration]
+
+
+Processing StaticPagesController#configuration (for 127.0.0.1 at 2011-04-11 16:02:31) [GET]
+Rendering template within layouts/application
+Rendering static_pages/configuration
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/configuration]
+
+
+Processing StaticPagesController#configuration (for 127.0.0.1 at 2011-04-11 16:15:44) [GET]
+Rendering template within layouts/application
+Rendering static_pages/configuration
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/configuration]
+
+
+Processing StaticPagesController#configuration (for 127.0.0.1 at 2011-04-11 16:17:22) [GET]
+Rendering template within layouts/application
+Rendering static_pages/configuration
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/configuration]
+
+
+Processing StaticPagesController#configuration (for 127.0.0.1 at 2011-04-11 16:17:39) [GET]
+Rendering template within layouts/application
+Rendering static_pages/configuration
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/configuration]
+
+
+Processing StaticPagesController#configuration (for 127.0.0.1 at 2011-04-11 16:17:47) [GET]
+Rendering template within layouts/application
+Rendering static_pages/configuration
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/configuration]
+
+
+Processing StaticPagesController#configuration (for 127.0.0.1 at 2011-04-11 16:18:01) [GET]
+Rendering template within layouts/application
+Rendering static_pages/configuration
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/configuration]
+
+
+Processing StaticPagesController#configuration (for 127.0.0.1 at 2011-04-11 16:18:26) [GET]
+Rendering template within layouts/application
+Rendering static_pages/configuration
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/configuration]
+
+
+Processing StaticPagesController#configuration (for 127.0.0.1 at 2011-04-11 16:18:39) [GET]
+Rendering template within layouts/application
+Rendering static_pages/configuration
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/configuration]
+
+
+Processing StaticPagesController#configuration (for 127.0.0.1 at 2011-04-11 16:18:44) [GET]
+Rendering template within layouts/application
+Rendering static_pages/configuration
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/configuration]
+
+
+Processing StaticPagesController#configuration (for 127.0.0.1 at 2011-04-11 16:21:07) [GET]
+Rendering template within layouts/application
+Rendering static_pages/configuration
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/configuration]
+
+
+Processing StaticPagesController#acknowledgement (for 127.0.0.1 at 2011-04-11 16:21:17) [GET]
+Rendering template within layouts/application
+Rendering static_pages/acknowledgement
+Completed in 21ms (View: 3, DB: 0) | 200 OK [http://localhost/acknowledgement]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-04-11 16:21:18) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing StaticPagesController#configuration (for 127.0.0.1 at 2011-04-11 16:21:20) [GET]
+Rendering template within layouts/application
+Rendering static_pages/configuration
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/configuration]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-04-11 16:21:22) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing StaticPagesController#configuration (for 127.0.0.1 at 2011-04-11 16:21:22) [GET]
+Rendering template within layouts/application
+Rendering static_pages/configuration
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/configuration]
