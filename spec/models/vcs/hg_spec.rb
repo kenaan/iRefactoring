@@ -4,8 +4,8 @@ describe Vcs::Hg do
   before(:each) do
     DDR_ENV[:vcs] = "Hg"
     DDR_ENV[:language] = "csharp"
-    @parser = Vcs::Hg.new()
     DDR_ENV[:project_root] = File.join(RAILS_ROOT+ "/spec/fixtures/hg_and_csharp_projects")
+    @parser = Vcs::Hg.new()
   end
   
   it 'should ignore commits which is not source code' do

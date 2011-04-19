@@ -11,8 +11,6 @@ Features:
 - generate report both for complexity and coverage
 - load code commits after system startup to improve efficiency
 
-TODO
-
 * Improve User experience
 
 - using bmc sample to fix the hardcoded svn parser
@@ -20,6 +18,9 @@ TODO
 - make configuration easier (regex for parse vcs log?)
 
 - improve user guide
+
+TODO
+
 
 * Future enhancement
 

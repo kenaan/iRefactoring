@@ -7,7 +7,7 @@ class Vcs::Hg
   end
   
   private
-  def is_source_code_log? line
+  def describes_code_commitment? line
     line.starts_with?("files:")
   end
   
@@ -18,7 +18,6 @@ class Vcs::Hg
   end
   
   def changes_in_one_commit line
-    line.split(" ").reject{|c| c == "file:" || !(c.ends_with?(source_code_postfix))}
+    line.split(" ").reject{|c| c == "file:"}
   end
-
 end

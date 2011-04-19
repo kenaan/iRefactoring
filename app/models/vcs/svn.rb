@@ -7,9 +7,8 @@ class Vcs::Svn
   end
 
   private
-  def is_source_code_log? line
-     result = (line.end_with? source_code_postfix) and (line.start_with? "M " or line.start_with? "A ")
-     result
+  def describes_code_commitment? line
+     (line.start_with? "M ") || (line.start_with? "A ")
   end
   
   def read_line_into_commits line, commits

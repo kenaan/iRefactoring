@@ -9,7 +9,6 @@ class Project
     project = Project.new(name, DDR_ENV[:vcs], DDR_ENV[:language])
   end
   
-  
   def read_code_measurement measurement_name
     measurement_results = read(instance_eval("Measurement::#{measurement_name.capitalize}.new()"))
 

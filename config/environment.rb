@@ -87,6 +87,5 @@ Rails::Initializer.run do |config|
   
 end
 
-
 vcs = DDR_ENV[:vcs]
 $code_commits = instance_eval("Vcs::#{vcs}.new()").get_code_committed
