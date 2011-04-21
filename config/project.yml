@@ -1,9 +1,11 @@
 # :vcs: Hg
 # :vcs: Git
+# :vcs: Clearcase
 :vcs: Svn
 
 # :language: csharp
 # :language: ruby
+# :language: c++
 :language: java
 
 #only works for java

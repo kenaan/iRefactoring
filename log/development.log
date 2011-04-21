@@ -31760,3 +31760,143 @@ Completed in 99ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/example/p
 Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-04-19 23:10:33) [GET]
   Parameters: {"id"=>"example"}
 Completed in 159ms (View: 1, DB: 0) | 200 OK [http://localhost/projects/example/plot/coverage]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-04-20 20:50:07) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-20 20:50:08) [GET]
+  Parameters: {"authenticity_token"=>"68394a8978cde06d4cfd463ceb2316500d32397e", "id"=>"example"}
+Rendering plots/show
+Completed in 42ms (View: 2, DB: 0) | 200 OK [http://localhost/plots/example?authenticity_token=68394a8978cde06d4cfd463ceb2316500d32397e]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-20 20:50:11) [GET]
+  Parameters: {"authenticity_token"=>"68394a8978cde06d4cfd463ceb2316500d32397e", "id"=>"example"}
+Rendering plots/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/example?authenticity_token=68394a8978cde06d4cfd463ceb2316500d32397e]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-20 20:50:12) [GET]
+  Parameters: {"authenticity_token"=>"68394a8978cde06d4cfd463ceb2316500d32397e", "id"=>"example"}
+Rendering plots/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/example?authenticity_token=68394a8978cde06d4cfd463ceb2316500d32397e]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-20 20:50:12) [GET]
+  Parameters: {"authenticity_token"=>"68394a8978cde06d4cfd463ceb2316500d32397e", "id"=>"example"}
+Rendering plots/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/example?authenticity_token=68394a8978cde06d4cfd463ceb2316500d32397e]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-20 20:50:16) [GET]
+  Parameters: {"authenticity_token"=>"68394a8978cde06d4cfd463ceb2316500d32397e", "id"=>"example"}
+Rendering plots/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/example?authenticity_token=68394a8978cde06d4cfd463ceb2316500d32397e]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-20 20:50:16) [GET]
+  Parameters: {"authenticity_token"=>"68394a8978cde06d4cfd463ceb2316500d32397e", "id"=>"example"}
+Rendering plots/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/example?authenticity_token=68394a8978cde06d4cfd463ceb2316500d32397e]
+
+
+Processing ProjectsController#index (for 10.18.3.124 at 2011-04-20 20:50:53) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://10.18.3.123/]
+
+
+Processing PlotsController#show (for 10.18.3.124 at 2011-04-20 20:50:55) [GET]
+  Parameters: {"authenticity_token"=>"89afcb9d10cc21ddb6be3f9e81356b57033e0fe5", "id"=>"example"}
+Rendering plots/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://10.18.3.123/plots/example?authenticity_token=89afcb9d10cc21ddb6be3f9e81356b57033e0fe5]
+
+
+Processing PlotsController#show (for 10.18.3.124 at 2011-04-20 20:50:58) [GET]
+  Parameters: {"authenticity_token"=>"89afcb9d10cc21ddb6be3f9e81356b57033e0fe5", "id"=>"example"}
+Rendering plots/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://10.18.3.123/plots/example?authenticity_token=89afcb9d10cc21ddb6be3f9e81356b57033e0fe5]
+
+
+Processing StaticPagesController#configuration (for 10.18.3.124 at 2011-04-20 20:51:09) [GET]
+Rendering template within layouts/application
+Rendering static_pages/configuration
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://10.18.3.123/configuration]
+
+
+Processing ProjectsController#index (for 10.18.3.124 at 2011-04-20 20:51:10) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://10.18.3.123/]
+
+
+Processing PlotsController#show (for 10.18.3.124 at 2011-04-20 20:51:11) [GET]
+  Parameters: {"authenticity_token"=>"89afcb9d10cc21ddb6be3f9e81356b57033e0fe5", "id"=>"example"}
+Rendering plots/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://10.18.3.123/plots/example?authenticity_token=89afcb9d10cc21ddb6be3f9e81356b57033e0fe5]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-04-20 20:53:55) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-04-20 20:53:57) [GET]
+  Parameters: {"authenticity_token"=>"68394a8978cde06d4cfd463ceb2316500d32397e", "id"=>"example"}
+Rendering plots/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/example?authenticity_token=68394a8978cde06d4cfd463ceb2316500d32397e]
+
+
+Processing ProjectsController#index (for 10.18.3.123 at 2011-04-20 20:55:45) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://10.18.3.123/]
+
+
+Processing PlotsController#show (for 10.18.3.123 at 2011-04-20 20:55:47) [GET]
+  Parameters: {"authenticity_token"=>"351db23dcc4c99b2da9cd407b3ac5a5b557d4e50", "id"=>"example"}
+Rendering plots/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://10.18.3.123/plots/example?authenticity_token=351db23dcc4c99b2da9cd407b3ac5a5b557d4e50]
+
+
+Processing ProjectsController#index (for 10.18.3.124 at 2011-04-20 20:56:00) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://10.18.3.123/]
+
+
+Processing PlotsController#show (for 10.18.3.124 at 2011-04-20 20:56:02) [GET]
+  Parameters: {"authenticity_token"=>"481d4b5eb559a8c92efec4749dbd0eb0018fecd6", "id"=>"example"}
+Rendering plots/show
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://10.18.3.123/plots/example?authenticity_token=481d4b5eb559a8c92efec4749dbd0eb0018fecd6]
+
+
+Processing PlotsController#project_complexity_plot (for 10.18.3.124 at 2011-04-20 20:56:02) [GET]
+  Parameters: {"id"=>"example"}
+Completed in 109ms (View: 0, DB: 0) | 200 OK [http://10.18.3.123/projects/example/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 10.18.3.124 at 2011-04-20 20:56:02) [GET]
+  Parameters: {"id"=>"example"}
+Completed in 43ms (View: 0, DB: 0) | 200 OK [http://10.18.3.123/projects/example/plot/coverage]
+
+
+Processing PlotsController#show (for 10.18.3.124 at 2011-04-20 20:56:05) [GET]
+  Parameters: {"authenticity_token"=>"481d4b5eb559a8c92efec4749dbd0eb0018fecd6", "id"=>"example"}
+Rendering plots/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://10.18.3.123/plots/example?authenticity_token=481d4b5eb559a8c92efec4749dbd0eb0018fecd6]
+
+
+Processing PlotsController#project_coverage_plot (for 10.18.3.124 at 2011-04-20 20:56:05) [GET]
+  Parameters: {"id"=>"example"}
+Completed in 76ms (View: 0, DB: 0) | 200 OK [http://10.18.3.123/projects/example/plot/coverage]
+
+
+Processing PlotsController#project_complexity_plot (for 10.18.3.124 at 2011-04-20 20:56:05) [GET]
+  Parameters: {"id"=>"example"}
+Completed in 38ms (View: 0, DB: 0) | 200 OK [http://10.18.3.123/projects/example/plot/complexity]
