@@ -31900,3 +31900,41 @@ Completed in 76ms (View: 0, DB: 0) | 200 OK [http://10.18.3.123/projects/example
 Processing PlotsController#project_complexity_plot (for 10.18.3.124 at 2011-04-20 20:56:05) [GET]
   Parameters: {"id"=>"example"}
 Completed in 38ms (View: 0, DB: 0) | 200 OK [http://10.18.3.123/projects/example/plot/complexity]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-05-05 09:45:13) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-05-05 09:45:16) [GET]
+  Parameters: {"authenticity_token"=>"2b2928b38563442e0b5bed56c83af3780e4db74a", "id"=>"example"}
+Rendering plots/show
+Completed in 39ms (View: 19, DB: 0) | 200 OK [http://localhost/plots/example?authenticity_token=2b2928b38563442e0b5bed56c83af3780e4db74a]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-05-05 09:45:16) [GET]
+  Parameters: {"id"=>"example"}
+Completed in 86ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/example/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-05-05 09:45:16) [GET]
+  Parameters: {"id"=>"example"}
+Completed in 85ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/example/plot/coverage]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-05-05 09:45:20) [GET]
+  Parameters: {"authenticity_token"=>"2b2928b38563442e0b5bed56c83af3780e4db74a", "id"=>"example"}
+Rendering plots/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/example?authenticity_token=2b2928b38563442e0b5bed56c83af3780e4db74a]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-05-05 09:45:20) [GET]
+  Parameters: {"id"=>"example"}
+Completed in 85ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/example/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-05-05 09:45:20) [GET]
+  Parameters: {"id"=>"example"}
+Completed in 44ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/example/plot/coverage]
