@@ -10,7 +10,7 @@ class Project
   end
   
   def read_code_measurement measurement_name
-    measurement_results = read(instance_eval("Measurement::#{measurement_name.capitalize}.new()"))
+    measurement_results = read(eval("Measurement::#{measurement_name.capitalize}.new()"))
 
     measurement_results.each_key{ |code_name|
       update_code_with_commits(code_name, $code_commits){ |commit|

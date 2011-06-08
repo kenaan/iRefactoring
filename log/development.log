@@ -31938,3 +31938,85 @@ Completed in 85ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/example/p
 Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-05-05 09:45:20) [GET]
   Parameters: {"id"=>"example"}
 Completed in 44ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/example/plot/coverage]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-05-12 09:31:26) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 41ms (View: 39, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-05-12 09:31:28) [GET]
+  Parameters: {"authenticity_token"=>"00abecd1107ad4aa936b3cd138940da4f6b48463", "id"=>"example"}
+Rendering plots/show
+Completed in 20ms (View: 9, DB: 0) | 200 OK [http://localhost/plots/example?authenticity_token=00abecd1107ad4aa936b3cd138940da4f6b48463]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-05-12 09:31:29) [GET]
+  Parameters: {"id"=>"example"}
+Completed in 85ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/example/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-05-12 09:31:29) [GET]
+  Parameters: {"id"=>"example"}
+Completed in 43ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/example/plot/coverage]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-06-08 13:53:08) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 25ms (View: 23, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-06-08 13:53:11) [GET]
+  Parameters: {"authenticity_token"=>"fbbdeef6075ab09a1e1c579e37ed002da090a780", "id"=>"example"}
+Rendering plots/show
+Completed in 61ms (View: 20, DB: 0) | 200 OK [http://localhost/plots/example?authenticity_token=fbbdeef6075ab09a1e1c579e37ed002da090a780]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-06-08 13:53:11) [GET]
+  Parameters: {"id"=>"example"}
+Completed in 121ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/example/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-06-08 13:53:11) [GET]
+  Parameters: {"id"=>"example"}
+Completed in 44ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/example/plot/coverage]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-06-08 13:53:30) [GET]
+Rendering template within layouts/application
+Rendering projects/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-06-08 13:53:31) [GET]
+  Parameters: {"authenticity_token"=>"fbbdeef6075ab09a1e1c579e37ed002da090a780", "id"=>"example"}
+Rendering plots/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/example?authenticity_token=fbbdeef6075ab09a1e1c579e37ed002da090a780]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-06-08 13:53:31) [GET]
+  Parameters: {"id"=>"example"}
+Completed in 82ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/example/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-06-08 13:53:31) [GET]
+  Parameters: {"id"=>"example"}
+Completed in 43ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/example/plot/coverage]
+
+
+Processing PlotsController#show (for 127.0.0.1 at 2011-06-08 13:53:59) [GET]
+  Parameters: {"authenticity_token"=>"fbbdeef6075ab09a1e1c579e37ed002da090a780", "id"=>"example"}
+Rendering plots/show
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/plots/example?authenticity_token=fbbdeef6075ab09a1e1c579e37ed002da090a780]
+
+
+Processing PlotsController#project_complexity_plot (for 127.0.0.1 at 2011-06-08 13:53:59) [GET]
+  Parameters: {"id"=>"example"}
+Completed in 40ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/example/plot/complexity]
+
+
+Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-06-08 13:53:59) [GET]
+  Parameters: {"id"=>"example"}
+Completed in 81ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/example/plot/coverage]

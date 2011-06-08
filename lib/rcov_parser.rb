@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'nokogiri'
 require 'fileutils'
-
 class RcovParser
   
   def initialize(input_dir, output_dir)
