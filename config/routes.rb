@@ -13,6 +13,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect '/introduction', :controller => 'static_pages', :action => 'introduction'
   map.connect '/configuration', :controller => 'static_pages', :action => 'configuration'
   map.connect '/acknowledgement', :controller => 'static_pages', :action => 'acknowledgement'
+  map.connect '/test', :controller => 'static_pages', :action => 'test'
   
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
