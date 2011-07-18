@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def test
-    text = %Q{
+    @text = %Q{
       
 
 
@@ -78,6 +78,6 @@ class StaticPagesController < ApplicationController
 
       
     }
-    render :text => text
+    render :content_type => "text/plain", :text => @text
   end
 end

@@ -32854,3 +32854,215 @@ Completed in 81ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/example/p
 Processing PlotsController#project_coverage_plot (for 127.0.0.1 at 2011-07-15 16:29:15) [GET]
   Parameters: {"id"=>"example"}
 Completed in 42ms (View: 0, DB: 0) | 200 OK [http://localhost/projects/example/plot/coverage]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-15 16:42:47) [GET]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-18 10:08:29) [GET]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-18 10:08:38) [GET]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-18 10:09:04) [GET]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-18 10:09:24) [GET]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-18 10:10:08) [GET]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-18 10:15:34) [GET]
+Rendering template within layouts/application
+Rendering static_pages/test
+Completed in 20ms (View: 19, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-18 10:16:21) [GET]
+Rendering template within layouts/application
+Rendering static_pages/test
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-18 10:17:05) [GET]
+Rendering template within layouts/application
+Rendering static_pages/test
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-18 10:17:11) [GET]
+Rendering template within layouts/application
+Rendering static_pages/test
+ERROR: compiling _run_erb_app47views47static_pages47test46html46erb RAISED compile error
+/Users/twer/workspace/iRefactoring/app/views/static_pages/test.html.erb:1: syntax error, unexpected '=', expecting kEND
+...;  __in_erb_template=true ;  =@text ; @output_buffer
+                              ^
+Function body:           def _run_erb_app47views47static_pages47test46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  =@text ; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/twer/workspace/iRefactoring/app/views/static_pages/test.html.erb:4:in `compile!'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_view/base.rb:367:in `_render_with_layout'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/base.rb:1174:in `render_for_file'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/base.rb:940:in `render_without_benchmark'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/twer/workspace/iRefactoring/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/twer/workspace/iRefactoring/app/controllers/static_pages_controller.rb:81:in `test'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/Users/twer/workspace/iRefactoring/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/twer/workspace/iRefactoring/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+/Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+/Users/twer/workspace/iRefactoring/vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+/Users/twer/workspace/iRefactoring/vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/twer/workspace/iRefactoring/vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+/Users/twer/workspace/iRefactoring/vendor/rails/railties/lib/commands/servers/webrick.rb:66
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:53:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:53:in `require'
+/Users/twer/workspace/iRefactoring/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/Users/twer/workspace/iRefactoring/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/Users/twer/workspace/iRefactoring/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/Users/twer/workspace/iRefactoring/vendor/rails/railties/lib/commands/server.rb:49
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:36:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/Users/twer/workspace/iRefactoring/app/views/static_pages/test.html.erb:1: syntax error, unexpected '=', expecting kEND
+...;  __in_erb_template=true ;  =@text ; @output_buffer
+                              ^) on line #1 of app/views/static_pages/test.html.erb:
+1: <% =@text %>
+
+    app/views/static_pages/test.html.erb:4:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:367:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1174:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:940:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/static_pages_controller.rb:81:in `test'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:53:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:53:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:36:in `require'
+    script/server:3
+
+Rendered /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (16.1ms)
+Rendered /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (16.6ms)
+Rendering /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-18 10:17:22) [GET]
+Rendering template within layouts/application
+Rendering static_pages/test
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-18 10:17:42) [GET]
+Rendering template within layouts/application
+Rendering static_pages/test
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-18 10:18:26) [GET]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-18 10:18:37) [GET]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test]
