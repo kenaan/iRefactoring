@@ -33066,3 +33066,87 @@ Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test]
 
 Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-18 10:18:37) [GET]
 Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-18 10:20:59) [GET]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-18 10:21:45) [GET]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-18 10:21:46) [GET]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-18 10:21:46) [GET]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-18 10:21:46) [GET]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-18 10:24:43) [GET]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-18 10:24:55) [GET]
+Rendering template within layouts/application
+Rendering static_pages/test
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-19 11:22:32) [GET]
+Rendering template within layouts/application
+Rendering static_pages/test
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing StaticPagesController#test (for 127.0.0.1 at 2011-07-19 11:22:47) [GET]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-07-19 11:24:24) [GET]
+
+
+ActionController::RoutingError (No route matches "/test2" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:53:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:53:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:36:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:36:in `require'
+    script/server:3
+
+Rendering /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing StaticPagesController#test2 (for 127.0.0.1 at 2011-07-19 11:24:48) [GET]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test2]

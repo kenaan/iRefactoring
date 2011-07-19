@@ -14,6 +14,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect '/configuration', :controller => 'static_pages', :action => 'configuration'
   map.connect '/acknowledgement', :controller => 'static_pages', :action => 'acknowledgement'
   map.connect '/test', :controller => 'static_pages', :action => 'test'
+  map.connect '/test2', :controller => 'static_pages', :action => 'test2'
   
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
