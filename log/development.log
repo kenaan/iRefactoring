@@ -33150,3 +33150,31 @@ Rendering /Users/twer/workspace/iRefactoring/vendor/rails/actionpack/lib/action_
 
 Processing StaticPagesController#test2 (for 127.0.0.1 at 2011-07-19 11:24:48) [GET]
 Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test2]
+
+
+Processing StaticPagesController#test2 (for 127.0.0.1 at 2011-07-19 15:50:58) [GET]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test2]
+
+
+Processing StaticPagesController#test2 (for 127.0.0.1 at 2011-07-19 15:51:05) [GET]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test2]
+
+
+Processing StaticPagesController#test2 (for 127.0.0.1 at 2011-07-19 15:55:02) [GET]
+Rendering template within layouts/application
+Rendering static_pages/test2
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/test2]
+
+
+Processing StaticPagesController#test2 (for 127.0.0.1 at 2011-07-19 15:55:05) [GET]
+Rendering template within layouts/application
+Rendering static_pages/test2
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/test2]
+
+
+Processing StaticPagesController#test2 (for 127.0.0.1 at 2011-07-19 15:55:27) [GET]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test2]
+
+
+Processing StaticPagesController#test2 (for 127.0.0.1 at 2011-07-19 15:56:13) [GET]
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/test2]
