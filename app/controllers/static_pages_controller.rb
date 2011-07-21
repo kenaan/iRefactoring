@@ -421,4 +421,8 @@ SN  - 1471-2407
 ER  - }
     render :content_type => "text/plain", :text => @text
   end
+  
+  def test3
+    render :content_type => "text/plain", :text => ""
+  end
 end
